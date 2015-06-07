@@ -1,7 +1,7 @@
 # View Wireframes
 
-## New Session
-![new-session]
+## Sign Up
+![sign-up]
 
 ## Feed Show (landing page)
 ![feed-show]
@@ -18,7 +18,7 @@
 ## Search Results
 ![search-results]
 
-[new-session]: ./wireframes/new_session.png
+[sign-up]: ./wireframes/sign_up.xml
 [feed-show]: ./wireframes/feed_show.png
 [blog-show]: ./wireframes/blog_show.png
 [post-show]: ./wireframes/post_show.png

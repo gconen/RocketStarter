@@ -5,8 +5,7 @@
 [heroku]: #
 
 ## Minimum Viable Product
-Kickstarter Clone is a placeholder name. As the placeholder name suggests, it
-duplicates the functionality of Kickstarter. Users can:
+RocketStarter duplicates the functionality of Kickstarter. Users can:
 
 - [ ] Sign up and sign in
 - [ ] Create projects to request funding
