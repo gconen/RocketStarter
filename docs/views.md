@@ -3,24 +3,27 @@
 ## Sign Up
 ![sign-up]
 
-## Feed Show (landing page)
-![feed-show]
+## Log In
+![Log In]
 
-## Blog Show
-![blog-show]
+## Landing Page (projects index)
+![landing-page]
 
-## Post Show
-![post-show]
+## Project Show
+![project-show]
 
-## Post Form
-![post-form]
+## New Pledge
+![pledge]
+
+## Project Form
+![project-form]
 
 ## Search Results
-![search-results]
+![search]
 
 [sign-up]: ./wireframes/sign_up.xml
-[feed-show]: ./wireframes/feed_show.png
-[blog-show]: ./wireframes/blog_show.png
-[post-show]: ./wireframes/post_show.png
-[post-form]: ./wireframes/post_form.png
-[search-results]: ./wireframes/search_results.png
+[landing-page]: ./wireframes/landing_page.png
+[pledge]: ./wireframes/pledge.png
+[project-show]: ./wireframes/project_show.png
+[project-form]: ./wireframes/project_form.png
+[search]: ./wireframes/search.png
