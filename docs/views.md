@@ -4,7 +4,7 @@
 ![sign-up]
 
 ## Log In
-![Log In]
+![log-in]
 
 ## Landing Page (projects index)
 ![landing-page]
@@ -21,7 +21,8 @@
 ## Search Results
 ![search]
 
-[sign-up]: ./wireframes/sign_up.xml
+[sign-up]: ./wireframes/sign_up.png
+[log-in]: ./wireframes/log_in.png
 [landing-page]: ./wireframes/landing_page.png
 [pledge]: ./wireframes/pledge.png
 [project-show]: ./wireframes/project_show.png
