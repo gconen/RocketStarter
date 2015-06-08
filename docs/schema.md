@@ -8,7 +8,7 @@ owner_id    | integer   | not null, foreign key (references users)
 title       | string    | not null
 description | text      | not null
 goal_amount | integer   | not null
-image       | string    | not null
+image_url   | string    | not null
 expiration  | date      | not null
 
 ## pledges

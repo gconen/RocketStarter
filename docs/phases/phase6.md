@@ -1,9 +1,10 @@
-# Phase 5: Duration
+# Phase 6: Search
 
 ## Rails
 ### Models
 
 ### Controllers
+Api::ProjectsController (search)
 
 ### Views
 
@@ -13,6 +14,6 @@
 ### Collections
 
 ### Views
-Update ProjectShow
+ProjectSearch (composite, contains ProjectsIndex)
 
 ## Gems/Libraries

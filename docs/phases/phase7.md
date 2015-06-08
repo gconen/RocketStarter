@@ -1,4 +1,4 @@
-# Phase 5: Duration
+# Phase 6: Search
 
 ## Rails
 ### Models
@@ -13,6 +13,9 @@
 ### Collections
 
 ### Views
-Update ProjectShow
+* Update ProjectShow
+* Update ProjectsIndexItem
+* Update ProjectForm
 
 ## Gems/Libraries
+filepicker

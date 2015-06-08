@@ -1,20 +1,27 @@
-# Phase 4: User Feeds
+# Phase 4: Rewards
 
 ## Rails
 ### Models
+Reward
 
 ### Controllers
-Api::PostsController (feed)
 
 ### Views
-posts/feed.json.jbuilder
+projects/show.json.jbuilder (include reward information)
 
 ## Backbone
 ### Models
+* Reward
+* Project: add parsing of nested rewards infomation.
 
 ### Collections
+Rewards
 
 ### Views
-* FeedShow (composite view, contains PostsIndex subview)
+* Update ProjectShow (add contained RewardsIndex)
+* RewardsIndex (composite view, contains RewardsIndexItem)
+* RewardsIndexItem
+* Update NewPledgeForm
+* Update ProjectForm
 
 ## Gems/Libraries
