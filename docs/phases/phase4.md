@@ -2,12 +2,12 @@
 
 ## Rails
 ### Models
-Reward
+* Reward
 
 ### Controllers
 
 ### Views
-projects/show.json.jbuilder (include reward information)
+* projects/show.json.jbuilder (include reward information)
 
 ## Backbone
 ### Models

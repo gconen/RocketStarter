@@ -4,16 +4,16 @@
 ### Models
 
 ### Controllers
-Api::ProjectsController (create, destroy, update, index, show)
+* Api::ProjectsController (create, destroy, update, index, show)
 
 ### Views
 
 ## Backbone
 ### Models
-Project
+* Project
 
 ### Collections
-Projects
+* Projects
 
 ### Views
 * ProjectForm

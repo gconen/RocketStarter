@@ -2,13 +2,13 @@
 
 ## Rails
 ### Models
-Pledge
+* Pledge
 
 ### Controllers
-Api::PledgesControllers (create)
+* Api::PledgesControllers (create)
 
 ### Views
-projects/show.json.jbuilder (includes pledge information)
+* projects/show.json.jbuilder (includes pledge information)
 
 ## Backbone
 ### Models
@@ -16,9 +16,9 @@ projects/show.json.jbuilder (includes pledge information)
 * Project: add parsing of nested pledge information
 
 ### Collections
-Pledges
+* Pledges
 
 ### Views
-NewPledgeForm
+* NewPledgeForm
 
 ## Gems/Libraries
