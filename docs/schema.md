@@ -16,7 +16,7 @@ column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
 project_id  | integer   | not null, foreign key
-sponser_id  | integer   | not null, foreign key (references users)
+sponsor_id  | integer   | not null, foreign key (references users)
 reward_id   | integer   | not null, foreign key
 amount      | integer   | not null
 
