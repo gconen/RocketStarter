@@ -1,4 +1,4 @@
-# Kickstarter Clone
+# RocketStarter
 
 [Heroku link][heroku]
 
