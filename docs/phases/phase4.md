@@ -3,6 +3,7 @@
 ## Rails
 ### Models
 * Reward
+* Rewarding (join table for users and rewards)
 
 ### Controllers
 
