@@ -17,7 +17,6 @@ column name | data type | details
 id          | integer   | not null, primary key
 project_id  | integer   | not null, foreign key
 sponsor_id  | integer   | not null, foreign key (references users)
-reward_id   | integer   | not null, foreign key
 amount      | integer   | not null
 
 ## rewards
@@ -27,6 +26,13 @@ id          | integer   | not null, primary key
 project_id  | integer   | not null, foreign key
 amount      | integer   | not null
 description | string    | not null
+
+## rewardings
+column name | data type | details
+------------|-----------|-----------------------
+id          | integer   | not null, primary key
+reward_id   | integer   | not null, foreign key
+sponsor_id  | integer   | not null, foreign key (references users)
 
 ## users
 column name     | data type | details
