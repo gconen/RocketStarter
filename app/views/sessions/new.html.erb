@@ -1,0 +1,37 @@
+<main class="user-form-container">
+  <h1>Log In</h1>
+  
+  <% if flash[:errors] %>
+    <ul class="errors">
+      <% flash[:errors].each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <form class="user-form" action="/session" method="post">
+    <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>"
+    >
+
+    <input
+      type="text"
+      name="user[email]"
+      value="<%= @user.email %>"
+      placeholder="Email"
+    >
+
+    <input
+      type="password"
+      name="user[password]"
+      placeholder="Password"
+    >
+
+    <input type="submit" value="Log me in!">
+  </form>
+  <div class="user-form-link">
+    <p>New to Rocketstarter? <a href="<%= new_user_url %>">Sign Up</a>
+  </div>
+</main>
