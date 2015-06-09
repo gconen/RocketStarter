@@ -7,7 +7,7 @@
 ## Minimum Viable Product
 RocketStarter duplicates the functionality of Kickstarter. Users can:
 
-- [ ] Sign up and sign in
+- [x] Sign up and sign in
 - [ ] Create projects to request funding
 - [ ] View other users' projects
 - [ ] Fund other users' projects
