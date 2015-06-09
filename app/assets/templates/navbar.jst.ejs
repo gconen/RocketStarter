@@ -1,0 +1,14 @@
+<h1 class="logo nav-item">ROCKETSTARTER</h1>
+<div class="nav-right">
+  <div id="log-out-link" class="sign-item">
+    <form action="/session" method="post">
+      <input
+        type="hidden"
+        name="authenticity_token"
+        value="<%= $("[name='csrf-token']").attr("content") %>"
+      >
+      <input type="hidden" name="_method" value="DELETE">
+      <input type="submit" class="log-out-button" value="Sign out">
+    </form>
+  </div>
+</div>

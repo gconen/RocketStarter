@@ -29,7 +29,32 @@
   margin-right:auto;
 }
 
-
 input {
   display: block;
+}
+
+nav {
+  position: relative
+}
+
+.logo {
+  float: left;
+}
+
+.nav-item {
+  float: left;
+}
+
+.nav-item:hover {
+  background-color: lightgrey;
+}
+
+.nav-right {
+  position: absolute;
+  right: 10px;
+}
+
+.log-out-button{
+  border:none;
+  background-color: transparent;
 }
