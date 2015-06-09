@@ -2,7 +2,7 @@
 
 [Heroku link][heroku]
 
-[heroku]: #
+[heroku]: rocketstarter.heroku.com
 
 ## Minimum Viable Product
 RocketStarter duplicates the functionality of Kickstarter. Users can:
