@@ -6,8 +6,8 @@ module Api
     end
 
     def show
-      @project = Project.find(params[:id])
-      render json: @project
+      @project = Project.includes(:owner).find(params[:id])
+      render :show
     end
 
     def create

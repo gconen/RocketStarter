@@ -15,7 +15,7 @@
  */
 /* reset */
 html, body, section, article,
-h1, h2, p, strong, em, a {
+h1, h2, h3, h4, h5, p, pre, a {
   margin: 0;
   border: 0;
   padding: 0;
@@ -149,6 +149,17 @@ nav {
 
 .projects-index-item h1 {
   font-weight: bold
+}
+
+.project-show-header > h1, h5 {
+  text-align: center;
+}
+
+.project-show-main {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
 }
 
 .clearfix:after {
