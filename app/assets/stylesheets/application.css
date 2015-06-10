@@ -13,6 +13,21 @@
  *= require_tree .
  *= require_self
  */
+/* reset */
+html, body, section, article,
+h1, h2, p, strong, em, a {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: inherit;
+  font: inherit;
+  text-decoration: inherit;
+  text-align: inherit;
+  color: inherit;
+  background: transparent;
+}
+
 .user-form-container {
   width: 511px;
   margin-left: auto;
@@ -34,27 +49,48 @@ input {
 }
 
 nav {
-  position: relative
+  position: relative;
+  border-bottom: 1px solid grey;
+  height: 60px;
 }
 
 .logo {
+  font-size: 36px;
   float: left;
+  margin: 10px;
 }
 
 .nav-item {
   float: left;
+  height: 100%;
 }
 
-.nav-item:hover {
+.nav-item * {
+  margin: auto;
+}
+
+.nav-button:hover {
   background-color: lightgrey;
 }
 
 .nav-right {
   position: absolute;
-  right: 10px;
+  right: 20px;
+  height: 100%;
 }
 
-.log-out-button{
+#log-out-link * {
+  height: 100%
+}
+
+.log-out-button {
   border:none;
   background-color: transparent;
+  font-size: 14px;
+}
+
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: block;
 }
