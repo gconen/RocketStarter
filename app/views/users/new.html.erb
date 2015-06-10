@@ -1,6 +1,6 @@
 <!-- todo: add client-side validations -->
 
-<main class="user-form-container">
+<div class="user-form-container">
   <h1>Sign Up</h1>
 
   <% if flash[:errors] %>
@@ -14,12 +14,14 @@
   <form class="user-form" action="/users" method="post">
     <input
       type="hidden"
+      class="user-input"
       name="authenticity_token"
       value="<%= form_authenticity_token %>"
     >
 
     <input
       type="text"
+      class="user-input"
       name="user[name]"
       value="<%= @user.name %>"
       placeholder="Name"
@@ -27,6 +29,7 @@
 
     <input
       type="text"
+      class="user-input"
       name="user[email]"
       value="<%= @user.email %>"
       placeholder="Email"
@@ -36,6 +39,7 @@
     todo: implement confirmation for signups
     <input
       type="text"
+      class="user-input"
       name="user[email_confirmation]"
       value="<%= @user.email %>"
       placeholder="Re-enter Email"
@@ -43,12 +47,14 @@
 
     <input
       type="password"
+      class="user-input"
       name="user[password]"
       placeholder="Password"
     >
 
     <!-- <input
       type="password"
+      class="user-input"
       name="user[password_confirmation]"
       placeholder="Re-enter Password"
     > -->
@@ -59,4 +65,4 @@
   <div class="user-form-link">
     <p>Have an account? <a href="<%= new_session_url %>">Log in</a>
   </div>
-<main class="user-form-container">
+</div>

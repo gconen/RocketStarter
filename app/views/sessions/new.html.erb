@@ -1,4 +1,4 @@
-<main class="user-form-container">
+<div class="user-form-container">
   <h1>Log In</h1>
 
   <% if flash[:errors] %>
@@ -18,6 +18,7 @@
 
     <input
       type="text"
+      class="user-input"
       id="email"
       name="user[email]"
       value="<%= @user.email %>"
@@ -26,6 +27,7 @@
 
     <input
       type="password"
+      class="user-input"
       id="password"
       name="user[password]"
       placeholder="Password"
@@ -33,14 +35,14 @@
 
     <input class="user-button" type="submit" value="Log me in!">
   </form>
-  <div class="line"></div>
+  <!-- <div class="line"></div>
   <p class="or">or</p>
-  <div class="line"></div>
+  <div class="line"></div> -->
   <button class="user-button" id="guest-login">Guest login</button>
   <div class="user-form-link">
     <p>New to Rocketstarter? <a href="<%= new_user_url %>">Sign Up</a>
   </div>
-</main>
+</div>
 
 <script>
   $(document).ready(function () {
