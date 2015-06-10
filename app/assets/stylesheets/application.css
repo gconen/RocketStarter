@@ -28,6 +28,10 @@ h1, h2, p, strong, em, a {
   background: transparent;
 }
 
+ul {
+  list-style: none;
+}
+
 input {
   display: block;
 }
@@ -127,6 +131,24 @@ nav {
   border:none;
   background-color: transparent;
   font-size: 14px;
+}
+
+.projects-list {
+  width: 1080px;
+  margin: auto;
+}
+
+.projects-index-item {
+  float: left;
+  width: 320px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 20px;
+}
+
+.projects-index-item h1 {
+  font-weight: bold
 }
 
 .clearfix:after {
