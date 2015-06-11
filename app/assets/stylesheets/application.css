@@ -180,6 +180,10 @@ nav {
   text-align: center;
 }
 
+.project-title > h1 {
+  font-size: 34px;
+}
+
 .project-show-main {
   width: 1000px;
   margin-left: auto;
@@ -267,4 +271,8 @@ nav {
   margin-right: auto;
   border: 1px solid lightgrey;
   border-radius: 5px;
+}
+
+.progress-big {
+  font-size: 45px;
 }
