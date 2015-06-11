@@ -1,0 +1,39 @@
+<div class="project-title">
+  <h1><%= pledge.project().get("title") %></h1>
+  <h2>by <%= pledge.project().owner().escape("name") %></h2>
+</div>
+
+<form class="pledge-form">
+
+  <div class="pledge-form-group">
+  <h1>Alrighty!</h1>
+
+    <% if (errors) { %>
+      <ul class="errors">
+        <% errors.forEach( function (error) { %>
+          <%= error %>
+        <% }); %>
+      </ul>
+    <% } %>
+
+    <input
+      type="hidden"
+      name="pledge[project_id]"
+      value="<%= pledge.escape("project_id") %>">
+
+    <div class="pledge-amount">
+      <label for="pledge-amount">Enter your pledge amount</label>
+      <input
+        type="text"
+        name="pledge[amount]"
+        id="pledge-amount"
+        value="$<%= pledge.amount %>">
+    </div>
+
+  </div>
+
+  <footer class="submit-footer">
+    <input class="button" type="submit" value="Pledge">
+  </footer>
+
+</form>

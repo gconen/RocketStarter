@@ -17,12 +17,22 @@ class User < ActiveRecord::Base
   attr_reader :password
 
   has_many(
-    :projects,
+    :owned_projects,
     class_name: "Project",
     foreign_key: :owner_id,
     primary_key: :id,
     inverse_of: :owner
   )
+
+  has_many(
+    :pledges,
+    class_name: "Pledge",
+    foreign_key: :sponsor_id,
+    primary_key: :id,
+    inverse_of: :sponsor
+  )
+
+  has_many :sponsored_projects, through: :pledges, source: :project
 
   def is_password?(password)
     BCrypt::Password.new(password_digest).is_password?(password)

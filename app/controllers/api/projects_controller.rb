@@ -1,8 +1,8 @@
 module Api
   class ProjectsController < ApiController
     def index
-      @projects = Project.all;
-      render json: @projects
+      @projects = Project.all
+      render :index
     end
 
     def show

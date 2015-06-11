@@ -11,10 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150610165332) do
+ActiveRecord::Schema.define(version: 20150611170524) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "pledges", force: :cascade do |t|
+    t.integer  "project_id", null: false
+    t.integer  "sponsor_id", null: false
+    t.integer  "amount",     null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "pledges", ["project_id"], name: "index_pledges_on_project_id", using: :btree
+  add_index "pledges", ["sponsor_id"], name: "index_pledges_on_sponsor_id", using: :btree
 
   create_table "projects", force: :cascade do |t|
     t.integer  "owner_id",    null: false
