@@ -3,6 +3,14 @@
 
   <div class="project-form-group">
 
+  <% if (errors) { %>
+    <ul class="errors">
+      <% errors.forEach( function (error) { %>
+        <%= error %>
+      <% }); %>
+    </ul>
+  <% } %>
+
     <div class="project-form-element clearfix">
       <label for="project-title">Project Title</label>
       <div class="project-input">
