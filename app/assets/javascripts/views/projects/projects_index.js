@@ -9,7 +9,7 @@ Kickstarter.Views.ProjectsIndex = Backbone.CompositeView.extend({
   addProjects: function () {
     this.collection.each(function (project) {
       this.addProject(project);
-    });
+    }.bind(this));
   },
 
   addProject: function (project) {
