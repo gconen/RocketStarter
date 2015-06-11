@@ -75,7 +75,7 @@ projects who titles contain a given search string.
 [Details][phase-six]
 
 ### Phase 7: Image Upload (~1 day)
-I will use filepicker.io to add image uploads, and update the ProjectShow and
+I will use imagery to add image uploads, and update the ProjectShow and
 ProjectsIndexItem view to display an uploaded image associated with the project.
 
 [Details][phase-seven]
