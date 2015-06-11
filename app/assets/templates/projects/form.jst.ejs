@@ -1,0 +1,46 @@
+<h1 class="project-form-header">Build your project!</h1>
+<form class="project-form">
+
+  <div class="project-form-group">
+
+    <div class="project-form-element clearfix">
+      <label for="project-title">Project Title</label>
+      <div class="project-input">
+        <input
+          type="text"
+          name="project[title]"
+          id="project-title"
+          value="<%= project.title %>"
+          placeholder="Enter your title here...">
+        </div>
+    </div>
+
+    <div class="project-form-element clearfix">
+      <label for="project-description">Project Description</label>
+      <div class="project-input">
+        <textarea
+          type="text"
+          name="project[description]"
+          id="project-description"
+          placeholder="Describe your project here..."><%= project.description %></textarea>
+        </div>
+    </div>
+
+    <div class="project-form-element clearfix">
+      <label for="project-goal_amount">Funding Goal</label>
+      <div class="project-input">
+        <input
+          type="text"
+          name="project[goal_amount]"
+          id="project-goal_amount"
+          value="$<%= project.goal_amount %>">
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="submit-footer">
+    <input class="button" type="submit" value="Launch">
+  </footer>
+
+</form>

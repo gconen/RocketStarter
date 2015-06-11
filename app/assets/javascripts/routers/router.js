@@ -6,6 +6,7 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "(/)": "index",
+    "(/)projects/new(/)": "new",
     "(/)projects/:id(/)": "show"
   },
 
@@ -13,6 +14,13 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
     this.projects.fetch();
     var view = new Kickstarter.Views.ProjectsIndex({
       collection: this.projects
+    });
+    this._swapViews(view);
+  },
+
+  new: function () {
+    var view = new Kickstarter.Views.ProjectForm({
+      model: new Kickstarter.Models.Project()
     });
     this._swapViews(view);
   },
