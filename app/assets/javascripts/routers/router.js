@@ -19,12 +19,14 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
     this._swapViews(view);
   },
 
-  newPledge: function (projectId) {
+  newPledge: function (projectId, rewardId) {
     var project = this.projects.getOrFetch(projectId);
     var pledge = new Kickstarter.Models.Pledge({
       project: project,
     });
-    var view = new Kickstarter.Views.PledgeForm({ model: pledge });
+    var view = new Kickstarter.Views.PledgeForm({
+      model: pledge,
+    });
     this._swapViews(view);
   },
 

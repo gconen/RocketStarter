@@ -7,11 +7,18 @@ Kickstarter.Views.PledgeForm = Backbone.CompositeView.extend({
 
   initialize: function (options) {
     this.listenTo(this.model.project(), "sync", this.render);
+    var regexp = new RegExp(/\?.*reward=(.+)$/);
+    var queryResult = Number(regexp.exec(window.location.hash));
+    if (queryResult) {
+      this.rewardID = queryResult[1];
+    }
   },
 
   addRewardOption: function (reward) {
+    var checked = reward.id === this.rewardID;
     var rewardView = new Kickstarter.Views.RewardOption({
       model: reward,
+      checked: checked
     });
     this.addSubview(".rewards-options-list", rewardView);
   },
@@ -25,9 +32,14 @@ Kickstarter.Views.PledgeForm = Backbone.CompositeView.extend({
 
 
   render: function () {
+    var checkedReward = this.model.project().rewards().get(this.rewardID);
+    if (checkedReward) {
+      var startAmount = checkedReward.escape("amount");
+    }
     this.$el.html(this.template({
       pledge: this.model,
-      errors: this.errors
+      errors: this.errors,
+      startAmount: startAmount
       }));
     this.addRewardOptions();
 
