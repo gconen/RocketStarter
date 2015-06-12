@@ -16,12 +16,13 @@ class Project < ActiveRecord::Base
   has_many :rewards, inverse_of: :project
   accepts_nested_attributes_for :rewards
 
+  # Warning: N+1 query if used for N projects
   def amount_raised
     pledges.sum(:amount)
   end
 
   def num_sponsors
-    pledges.count
+    pledges.select(:sponsor_id).distinct.count(:sponsor_id)
   end
 
 
