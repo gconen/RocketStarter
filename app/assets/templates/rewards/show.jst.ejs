@@ -1,2 +1,5 @@
+<a href="#projects/<%= reward.escape("project_id") %>/pledges/new/?reward=<%= reward.id %>">
 <h1>Pledge $<%= reward.escape("amount") %> or more</h1>
-<p><%= reward.escape("description") %>
+<p><%= reward.escape("description") %></p>
+<div class="hover-text"><span>Select this reward</span></div>
+</a>
