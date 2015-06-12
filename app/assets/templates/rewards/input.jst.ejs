@@ -1,19 +1,19 @@
 <h2 class="reward-number">Reward #<%= num %></h2>
 <div class="reward-input">
-  <div class="reward-row">
+  <div class="reward-row clearfix">
 
-    <label for="reward-amount-<%= num %>">
+    <label for="reward-amount-<%= num %>">Pledge Amount</label>
     <input
       type="text"
+      class="reward-amount"
       id="reward-amount-<%= num %>"
       name="project[reward][<%= num %>][amount]"
       value="$<%= reward.escape("amount") %>">
-    <button class="close-button">&times delete</button>
 
   </div>
-  <div class="reward-row">
+  <div class="reward-row clearfix">
 
-    <label for="reward-description-<%= num %>">
+    <label for="reward-description-<%= num %>">Description</label>
     <textarea
       id="reward-description-<%= num %>"
       name="project[reward][<%= num %>][description]"

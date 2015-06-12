@@ -41,6 +41,9 @@ input, textarea {
   box-sizing: border-box;
   border: 1px solid lightgrey;
 }
+input {
+  height: 40px;
+}
 
 .user-form-container {
   width: 400px;
@@ -216,12 +219,25 @@ nav {
   margin-right: auto;
   border: 1px solid lightgrey;
   border-radius: 5px;
+  margin-bottom: 100px;
 }
 
 .project-form-element {
   margin: 20px;
   background-color: lightgreen;
   border-radius: 5px;
+}
+
+#add-reward {
+  margin: 20px;
+  border: 1px dashed lightgrey;
+  border-radius: 5px;
+  padding: 35px;
+}
+
+#add-reward:hover {
+  cursor: pointer;
+  background-color: lightgrey;
 }
 
 .project-form-element > * {
@@ -237,6 +253,50 @@ nav {
 .project-input {
   padding: 5px;
   width: 70%;
+}
+
+.reward-input {
+  background-color: lightgrey;
+  margin: 5px;
+  width: 475px;
+}
+
+.reward-row > * {
+  float: left;
+  box-sizing: border-box;
+  border: 1px solid grey;
+  border-radius: 0;
+}
+
+.reward-row {
+  position: relative;
+}
+
+.reward-row > label {
+  width: 120px;
+  text-align: left;
+  font-size: 12px;
+  height: 40px;
+}
+
+.reward-row textarea {
+  width: 355px;
+  height: 120px;
+}
+
+.reward-number {
+  padding: 15px;
+  width: 150px;
+  text-align: left;
+}
+
+.reward-amount {
+  width: 100px;
+}
+
+.close-button {
+  position: absolute;
+  right: 0;
 }
 
 .clearfix:after {
