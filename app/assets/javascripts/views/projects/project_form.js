@@ -25,6 +25,7 @@ Kickstarter.Views.ProjectForm = Backbone.CompositeView.extend({
 
   addRewardInputs: function () {
     this.rewardCount = 0;
+    this.removeSubviews(".reward-input-list");
     this.model.rewards().each( function (reward) {
       this.addRewardInput(reward);
     }.bind(this));
