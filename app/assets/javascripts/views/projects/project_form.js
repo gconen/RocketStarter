@@ -2,7 +2,33 @@ Kickstarter.Views.ProjectForm = Backbone.CompositeView.extend({
   template: JST['projects/form'],
 
   events: {
-    "submit .project-form": "save"
+    "submit .project-form": "save",
+    "click #add-reward": "addNewReward"
+  },
+
+  initialize: function (options) {
+    this.rewardCount = 0;
+  },
+
+  addNewReward: function () {
+    this.addRewardInput(new Kickstarter.Models.Reward());
+  },
+
+  addRewardInput: function (reward) {
+    this.rewardCount += 1;
+    var rewardView = new Kickstarter.Views.RewardInput({
+      model: reward,
+      num: this.rewardCount
+    });
+    this.addSubview(".reward-input-list", rewardView);
+  },
+
+  addRewardInputs: function () {
+    this.rewardCount = 0;
+    this.model.rewards().each( function (reward) {
+      this.addRewardInput(reward);
+    }.bind(this));
+    this.addNewReward();
   },
 
   render: function () {
@@ -10,7 +36,7 @@ Kickstarter.Views.ProjectForm = Backbone.CompositeView.extend({
       project: this.model,
       errors: this.errors
       }));
-    //this.addRewardInputs();
+    this.addRewardInputs();
 
     return this;
   },
