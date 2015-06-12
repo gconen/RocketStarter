@@ -14,8 +14,20 @@ Kickstarter.Models.Project = Backbone.Model.extend({
       this.owner().set(response.owner);
       delete response.owner;
     }
+    if (response.rewards) {
+      this.rewards().set(response.rewards);
+      delete response.rewards;
+    }
 
     return response;
+  },
+
+  rewards: function () {
+    if (!this._rewards) {
+      this._rewards = new Kickstarter.Collections.Rewards();
+    }
+
+    return this._rewards;
   },
 
   shortDescription: function () {

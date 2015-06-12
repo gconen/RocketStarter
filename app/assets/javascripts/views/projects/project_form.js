@@ -1,4 +1,4 @@
-Kickstarter.Views.ProjectForm = Backbone.View.extend({
+Kickstarter.Views.ProjectForm = Backbone.CompositeView.extend({
   template: JST['projects/form'],
 
   events: {
@@ -10,6 +10,7 @@ Kickstarter.Views.ProjectForm = Backbone.View.extend({
       project: this.model,
       errors: this.errors
       }));
+    //this.addRewardInputs();
 
     return this;
   },
