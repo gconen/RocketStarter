@@ -7,7 +7,7 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
   routes: {
     "(/)": "index",
     "(/)projects/new(/)": "newProject",
-    "(/)projects/:projectId/pledges/new": "newPledge",
+    "(/)projects/:projectId/pledges/new*query": "newPledge",
     "(/)projects/:id(/)": "show"
   },
 

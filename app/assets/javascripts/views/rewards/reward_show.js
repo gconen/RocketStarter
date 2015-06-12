@@ -3,7 +3,6 @@ Kickstarter.Views.RewardShow = Backbone.View.extend({
 
   className:"rewards-list-item",
 
-
   render: function () {
     this.$el.html(this.template({
       reward: this.model,
