@@ -9,11 +9,27 @@ Kickstarter.Views.PledgeForm = Backbone.CompositeView.extend({
     this.listenTo(this.model.project(), "sync", this.render);
   },
 
+  addRewardOption: function (reward) {
+    var rewardView = new Kickstarter.Views.RewardOption({
+      model: reward,
+    });
+    this.addSubview(".rewards-options-list", rewardView);
+  },
+
+  addRewardOptions: function () {
+    this.removeSubviews(".rewards-options-list");
+    this.model.project().rewards().each( function (reward) {
+      this.addRewardOption(reward);
+    }.bind(this));
+  },
+
+
   render: function () {
     this.$el.html(this.template({
       pledge: this.model,
       errors: this.errors
       }));
+    this.addRewardOptions();
 
     return this;
   },

@@ -14,7 +14,7 @@ Kickstarter.Views.ProjectShow = Backbone.CompositeView.extend({
   },
 
   addRewardViews: function () {
-    this.removeSubviews(".reward-list");
+    this.removeSubviews(".rewards-list");
     this.model.rewards().each( function (reward) {
       this.addRewardView(reward);
     }.bind(this));

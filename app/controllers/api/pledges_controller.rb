@@ -12,7 +12,8 @@ module Api
     private
 
     def pledge_params
-      pledge_params = params.require(:pledge).permit(:amount, :project_id)
+      pledge_params = params.require(:pledge)
+                            .permit(:amount, :project_id, :reward_id)
       pledge_params[:amount] = pledge_params[:amount]
                                         .gsub(/[\$,]/, "")
                                         .to_i
