@@ -1,0 +1,9 @@
+<label for="reward-<%= reward.id %>">
+  <input
+    type="radio"
+    name="pledge[reward_id]"
+    value="<%= reward.id %>"
+    id="reward-<%= reward.id %>">
+  <div class="reward-option-amount">$<%= reward.escape("amount") %>+</div>
+  <div class="reward-option-description"><%= reward.escape("description") %></div>
+</label>
