@@ -188,10 +188,42 @@ nav {
 }
 
 .project-show-main {
-  width: 1000px;
+  width: 1100px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px;
+}
+
+.project-show-main > * {
+  float: left;
+}
+
+.project-description {
+  width: 700px;
+  margin: 25px;
+  font-size: 18px;
+}
+
+.project-description h2 {
+  text-align: left;
+  font-size: 27px;
+  margin-bottom: 60px
+}
+
+.rewards {
+  width: 350px;
+}
+
+.rewards-list-item {
+  margin: 25px;
+  background-color: lightgrey;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.rewards-list-item h1 {
+  font-weight: bold;
 }
 
 .submit-footer {
