@@ -13,7 +13,8 @@ class Project < ActiveRecord::Base
 
   has_many :pledges, inverse_of: :project
   has_many :sponsors, through: :pledges, source: :sponsor
-  has_many :rewards
+  has_many :rewards, inverse_of: :project
+  accepts_nested_attributes_for :rewards
 
   def amount_raised
     pledges.sum(:amount)
