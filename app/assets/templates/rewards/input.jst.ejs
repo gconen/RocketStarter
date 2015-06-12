@@ -7,7 +7,7 @@
       type="text"
       class="reward-amount"
       id="reward-amount-<%= num %>"
-      name="project[reward][<%= num %>][amount]"
+      name="project[rewards][<%= num - 1 %>][amount]"
       value="$<%= reward.escape("amount") %>">
 
   </div>
@@ -16,7 +16,7 @@
     <label for="reward-description-<%= num %>">Description</label>
     <textarea
       id="reward-description-<%= num %>"
-      name="project[reward][<%= num %>][description]"
+      name="project[rewards][<%= num - 1 %>][description]"
     ><%= reward.escape("description") %></textarea>
 
   </div>
