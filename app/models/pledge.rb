@@ -1,8 +1,8 @@
 class Pledge < ActiveRecord::Base
   validates :sponsor, :project, presence: true
-  validates :project_id, uniqueness: {
-    scope: :sponsor_id,
-    message: "Error: You're already backing this project"
+  validates :sponsor_id, uniqueness: {
+    scope: :reward_id,
+    message: "Error: You're already backing this project for this reward"
   }
   validates :amount, numericality: { greater_than: 0 }
 
@@ -15,6 +15,8 @@ class Pledge < ActiveRecord::Base
     primary_key: :id,
     inverse_of: :pledges
   )
+
+  belongs_to :reward, inverse_of: :pledges
 
 
 end

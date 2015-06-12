@@ -1,0 +1,23 @@
+<h2 class="reward-number">Reward #<%= num %></h2>
+<div class="reward-input">
+  <div class="reward-row">
+
+    <label for="reward-amount-<%= num %>">
+    <input
+      type="text"
+      id="reward-amount-<%= num %>"
+      name="project[reward][<%= num %>][amount]"
+      value="$<%= reward.escape("amount") %>">
+    <button class="close-button">&times delete</button>
+
+  </div>
+  <div class="reward-row">
+
+    <label for="reward-description-<%= num %>">
+    <textarea
+      id="reward-description-<%= num %>"
+      name="project[reward][<%= num %>][description]"
+    ><%= reward.escape("description") %></textarea>
+
+  </div>
+</div>

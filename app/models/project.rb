@@ -12,8 +12,8 @@ class Project < ActiveRecord::Base
   )
 
   has_many :pledges, inverse_of: :project
-
   has_many :sponsors, through: :pledges, source: :sponsor
+  has_many :rewards
 
   def amount_raised
     pledges.sum(:amount)
