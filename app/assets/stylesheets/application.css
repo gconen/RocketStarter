@@ -366,6 +366,10 @@ nav {
   border-radius: 5px;
 }
 
+#pledge-amount {
+  font-size: 28px;
+}
+
 .progress-big {
   font-size: 45px;
 }
