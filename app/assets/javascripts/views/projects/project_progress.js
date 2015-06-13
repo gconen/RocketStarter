@@ -9,6 +9,7 @@ Kickstarter.Views.ProjectProgress = Backbone.View.extend({
     this.$el.html(this.template({
       project: this.model,
       }));
+    debugger;
 
     return this;
   },

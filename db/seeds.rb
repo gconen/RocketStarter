@@ -15,7 +15,8 @@ guest = User.new(
 guest_project = guest.owned_projects.new(
   title: "The Visitor",
   goal_amount: 75000,
-  description: "I'm a guest, I need to visit people. This will dramatically increase the efficiency of my visiting by allowing me to make suborbital flights between different hosts, maximizing the the number of times and places where I can be a guest."
+  description: "I'm a guest, I need to visit people. This will dramatically increase the efficiency of my visiting by allowing me to make suborbital flights between different hosts, maximizing the the number of times and places where I can be a guest.",
+  end_date: Time.now + 15.days
 )
 
 guest_project.rewards.new(
@@ -39,7 +40,8 @@ jeb = User.new(
 jeb_project = jeb.owned_projects.new(
   title: "Getting into space",
   goal_amount: 5000,
-  description: "We've been told that we can't officially call ourselves a space agency until we've actually been to space. So we're raising money to build a rocket to get there! Give us some help at making this first step into rocket design."
+  description: "We've been told that we can't officially call ourselves a space agency until we've actually been to space. So we're raising money to build a rocket to get there! Give us some help at making this first step into rocket design.",
+  end_date: Time.now + 30.days
 )
 
 jeb_project.rewards.new(
