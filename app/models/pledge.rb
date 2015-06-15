@@ -2,6 +2,7 @@ class Pledge < ActiveRecord::Base
   validates :sponsor, :project, presence: true
   validates :amount, numericality: { greater_than: 0 }
   validate :valid_reward_choice
+  validate :project_not_expired
 
   belongs_to :project, inverse_of: :pledges
 
@@ -34,4 +35,9 @@ class Pledge < ActiveRecord::Base
     end
   end
 
+  def project_not_expired
+    if project.end_date > Time.now;
+      errors.add :project, "funding has ended"
+    end
+  end
 end

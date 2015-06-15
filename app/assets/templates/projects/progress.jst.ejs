@@ -7,11 +7,16 @@
     <p class="progress-big">$<%= project.escape("amount_raised") %></p>
     <p class="progress-small">pledged of $<%= project.escape("goal_amount") %> goal</p>
   </li>
-  <li>
-    <p class="progress-big"><%= daysLeft %></p>
-    <p class="progress-small">days to go</p>
-  </li>
-  <li>
-    <a href="#projects/<%= project.id %>/pledges/new" class="button">Back This Project</a>
-  </li>
+  <% if (daysLeft > 0) { %>
+    <li>
+      <p class="progress-big"><%= daysLeft %></p>
+      <p class="progress-small">days to go</p>
+    </li>
+    <li>
+      <a href="#projects/<%= project.id %>/pledges/new" class="button">Back This Project</a>
+    </li>
+  <% } else { %>
+    <li>
+      <p class="progress-big">Funding Closed</p>
+  <% } %>
 </ul>

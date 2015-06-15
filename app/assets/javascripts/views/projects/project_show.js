@@ -9,6 +9,7 @@ Kickstarter.Views.ProjectShow = Backbone.CompositeView.extend({
   addRewardView: function (reward) {
     var rewardView = new Kickstarter.Views.RewardShow({
       model: reward,
+      live: Date.parse(this.model.get("end_date")) > Date.now()
     });
     this.addSubview(".rewards-list", rewardView);
   },
@@ -31,7 +32,9 @@ Kickstarter.Views.ProjectShow = Backbone.CompositeView.extend({
   },
 
   render: function () {
-    this.$el.html(this.template({ project: this.model }));
+    this.$el.html(this.template({
+      project: this.model,
+    }));
     this.attachSubviews();
     this.addRewardViews();
 
