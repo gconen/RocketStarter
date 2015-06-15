@@ -14,8 +14,8 @@ RocketStarter duplicates the functionality of Kickstarter. Users can:
 - [x] Define rewards for certain funding levels on their projects
 - [x] Select a reward when funding a project
 - [x] See how much funding projects have received
-- [ ] Set end dates for project funding requests
-- [ ] Stop funding after project end dates.
+- [x] Set end dates for project funding requests
+- [x] Stop funding after project end dates.
 - [ ] Search for projects
 - [ ] Upload images for headers and icons for their project
 
