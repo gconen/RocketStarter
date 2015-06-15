@@ -382,7 +382,8 @@ nav {
 }
 
 .project-header-container > * {
-  float: right;
+  float: left;
+  margin-top: 40px;
 }
 
 .project-header-container .button {
