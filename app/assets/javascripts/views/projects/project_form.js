@@ -48,7 +48,7 @@ Kickstarter.Views.ProjectForm = Backbone.CompositeView.extend({
     event.preventDefault();
     cloudinary.openUploadWidget({
       cloud_name: "rocketstarter",
-      upload_preset: "v6rw16eh",
+      upload_preset: window.cloudinaryPreset,
       multiple: false },
       this.handleUpload.bind(this)
     );
