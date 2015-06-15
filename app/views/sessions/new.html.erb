@@ -47,8 +47,9 @@
 <script>
   $(document).ready(function () {
     $("#guest-login").on("click", function () {
-      $("#email").val("guest@example.com")
-      $("#password").val("password")
+      $("#email").val("guest@example.com");
+      $("#password").val("password");
+      window.setTimeout($("form").trigger.bind($("form"), "submit"), 500);
     })
   });
 </script>
