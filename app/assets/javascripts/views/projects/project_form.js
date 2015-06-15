@@ -3,7 +3,8 @@ Kickstarter.Views.ProjectForm = Backbone.CompositeView.extend({
 
   events: {
     "submit .project-form": "save",
-    "click #add-reward": "addNewReward"
+    "click #add-reward": "addNewReward",
+    "click #upload-button": "openWidget"
   },
 
   initialize: function (options) {
@@ -30,6 +31,28 @@ Kickstarter.Views.ProjectForm = Backbone.CompositeView.extend({
       this.addRewardInput(reward);
     }.bind(this));
     this.addNewReward();
+  },
+
+  handleUpload: function (error, result) {
+    if (error) {
+      debugger;
+    } else {
+      var path = result[0].path;
+      var url = "https://res.cloudinary.com/rocketstarter/image/upload/h_200,w_400/" + path;
+      debugger;
+      $("#project-image-path").val(path);
+      $("#form-thumbnail").attr("src", url);
+    }
+  },
+
+  openWidget: function (event) {
+    event.preventDefault();
+    cloudinary.openUploadWidget({
+      cloud_name: "rocketstarter",
+      upload_preset: "v6rw16eh",
+      multiple: false },
+      this.handleUpload.bind(this)
+    );
   },
 
   render: function () {
