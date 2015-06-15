@@ -311,6 +311,10 @@ nav {
   background-color: lightgrey;
 }
 
+#form-thumbnail:hover {
+  cursor: pointer;
+}
+
 .project-form-element > * {
   float: left;
   box-sizing: border-box;
