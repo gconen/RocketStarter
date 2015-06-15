@@ -36,7 +36,7 @@ class Pledge < ActiveRecord::Base
   end
 
   def project_not_expired
-    if project.end_date > Time.now;
+    if project.end_date < Time.now;
       errors.add :project, "funding has ended"
     end
   end
