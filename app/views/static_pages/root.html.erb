@@ -1,6 +1,7 @@
 <div id="navbar"></div>
 <main id="main"></main>
 <script>
+  window.cloudinaryPreset = "<%= ENV["cloudinary_preset"] %>";
   $(document).ready(function(){
     Kickstarter.initialize();
   });
