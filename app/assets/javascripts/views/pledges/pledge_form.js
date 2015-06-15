@@ -2,7 +2,8 @@ Kickstarter.Views.PledgeForm = Backbone.CompositeView.extend({
   template: JST['pledges/form'],
 
   events: {
-    "submit .pledge-form": "save"
+    "submit .pledge-form": "save",
+    "click .rewards-options-list-item": "updateAmount"
   },
 
   initialize: function (options) {
@@ -62,6 +63,14 @@ Kickstarter.Views.PledgeForm = Backbone.CompositeView.extend({
         this.render();
       }.bind(this)
     });
+  },
 
+  updateAmount: function (event) {
+    var amount = $(event.currentTarget).find(".reward-option-amount").html();
+    var newValue = parseInt(amount.slice(1));
+    var $pledgeAmount = this.$("#pledge-amount")
+    if (newValue) {
+      $pledgeAmount.val('$' + newValue);
+    }
   }
 });
