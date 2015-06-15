@@ -45,6 +45,7 @@ Kickstarter.Views.ProjectForm = Backbone.CompositeView.extend({
   save: function (event) {
     event.preventDefault();
     var formData = $(".project-form").serializeJSON();
+    this.model.set(formData.project, { parse: true });
     this.model.save(formData, {
       success: function () {
         Backbone.history.navigate("#", { trigger: true });

@@ -3,6 +3,7 @@ class Project < ActiveRecord::Base
   validates :goal_amount, :end_date, presence: true
   validates :title, uniqueness: { scope: :owner }
   validates :goal_amount, numericality: { greater_than: 0 }
+  validate :valid_end_date
 
   belongs_to(
     :owner,
@@ -26,5 +27,11 @@ class Project < ActiveRecord::Base
     pledges.select(:sponsor_id).distinct.count(:sponsor_id)
   end
 
-
+  def valid_end_date
+    if Time.now + 23.hours > end_date
+      errors.add :end_date, "must be at least 1 day away"
+    elsif Time.now + 60.days < end_date
+      errors.add :end_date, "cannot be more than 60 days away"
+    end
+  end
 end

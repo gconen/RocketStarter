@@ -27,11 +27,22 @@
       <label for="project-description">Project Description</label>
       <div class="project-input">
         <textarea
-          type="text"
           name="project[description]"
           id="project-description"
           placeholder="Describe your project here..."><%= project.description %></textarea>
         </div>
+    </div>
+
+    <div class="project-form-element clearfix">
+      <label for="project-duration">Funding Duration (days)</label>
+      <div class="project-input">
+        <input
+          type="text"
+          name="project[duration]"
+          id="project-duration"
+          value="<%= project.goal_amount || 30 %>">
+      </div>
+      <p class="duration-rec">1-60 days, 30 days recommended</p>
     </div>
 
     <div class="project-form-element clearfix">
