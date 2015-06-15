@@ -1,15 +1,15 @@
 <ul class="progress-list">
   <li>
-    <p class="progress-big"><%= project.escape("num_sponsors") %></h1>
+    <p class="progress-big"><%= project.escape("num_sponsors") %></p>
     <p class="progress-small">backers</p>
   </li>
   <li>
-    <p class="progress-big">$<%= project.escape("amount_raised") %></h1>
+    <p class="progress-big">$<%= project.escape("amount_raised") %></p>
     <p class="progress-small">pledged of $<%= project.escape("goal_amount") %> goal</p>
   </li>
   <li>
-    <p class="progress-big"></h1>
-    <p class="progress-small"></p>
+    <p class="progress-big"><%= daysLeft %></p>
+    <p class="progress-small">days to go</p>
   </li>
   <li>
     <a href="#projects/<%= project.id %>/pledges/new" class="button">Back This Project</a>

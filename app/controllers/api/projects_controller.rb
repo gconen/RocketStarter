@@ -12,7 +12,7 @@ module Api
 
     def create
       @project = current_user.owned_projects.new(project_params)
-      @project.end_date = Time.now + params[:project][:duration].days
+      @project.end_date = Time.now + params[:project][:duration].to_i.days
       if @project.save
         render json: @project
       else
