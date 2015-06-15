@@ -4,7 +4,8 @@ Kickstarter.Views.ProjectForm = Backbone.CompositeView.extend({
   events: {
     "submit .project-form": "save",
     "click #add-reward": "addNewReward",
-    "click #upload-button": "openWidget"
+    "click #upload-button": "openWidget",
+    "click #form-thumbnail": "openWidget"
   },
 
   initialize: function (options) {
@@ -34,9 +35,7 @@ Kickstarter.Views.ProjectForm = Backbone.CompositeView.extend({
   },
 
   handleUpload: function (error, result) {
-    if (error) {
-      debugger;
-    } else {
+    if (!error) {
       var path = result[0].path;
       var url = "https://res.cloudinary.com/rocketstarter/image/upload/h_200,w_400/" + path;
       debugger;
