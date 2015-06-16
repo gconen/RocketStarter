@@ -16,6 +16,58 @@
   font-weight: bold;
 }
 
+.pledge-amount h2 {
+  text-align: left;
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+
 #pledge-amount {
   font-size: 28px;
+}
+
+input[type=radio] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+.rewards-options-list {
+  -webkit-padding-start: 0px;
+}
+
+.rewards-options-list-item label > * {
+  float: left;
+  margin-top: 30px;
+}
+
+.rewards-options-list-item:hover, .rewards-options-list-item.active {
+  background-color: #def7e0;
+}
+
+.rewards-options-list-item {
+  border-bottom: 1px solid #2bde73;
+}
+
+.rewards-options-list-item:last-child {
+  border: none;
+}
+
+.rewards-options-list-item label:hover {
+  cursor: pointer;
+}
+
+.rewards-options-list-item input {
+  margin-left: 15px;
+}
+
+.reward-option-amount {
+  font-weight: bold;
+  width: 125px;
+  margin-left: 3px;
+}
+
+.reward-option-description {
+  margin: 30px;
 }
