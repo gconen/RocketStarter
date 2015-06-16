@@ -5,5 +5,6 @@ Rails.application.routes.draw do
   namespace :api, defaults: { format: :json } do
     resources :projects, except: [:new, :edit]
     resources :pledges, only: [:create]
+    resources :categories, only: [:show, :index]
   end
 end

@@ -17,6 +17,7 @@ class Project < ActiveRecord::Base
   has_many :sponsors, through: :pledges, source: :sponsor
   has_many :rewards, inverse_of: :project
   accepts_nested_attributes_for :rewards
+  belongs_to :category, inverse_of: :projects
 
   # Warning: N+1 query if used for N projects
   def amount_raised
