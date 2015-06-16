@@ -38,7 +38,6 @@ Kickstarter.Views.ProjectForm = Backbone.CompositeView.extend({
     if (!error) {
       var path = result[0].path;
       var url = "https://res.cloudinary.com/rocketstarter/image/upload/h_200,w_400/" + path;
-      debugger;
       $("#project-image-path").val(path);
       $("#form-thumbnail").attr("src", url);
     }
@@ -58,7 +57,11 @@ Kickstarter.Views.ProjectForm = Backbone.CompositeView.extend({
     this.$el.html(this.template({
       project: this.model,
       errors: this.errors
-      }));
+    }));
+    this.addSubview(
+      "#category-select",
+      new Kickstarter.Views.CategorySelect({ collection: this.collection })
+    );
     this.addRewardInputs();
 
     return this;
@@ -70,8 +73,10 @@ Kickstarter.Views.ProjectForm = Backbone.CompositeView.extend({
     this.model.set(formData.project, { parse: true });
     this.model.save(formData, {
       success: function () {
+        var category = this.collection.get(this.model.get("category_id"));
+        category.projects().add(this.model);
         Backbone.history.navigate("#", { trigger: true });
-      },
+      }.bind(this),
       error: function (model, response) {
         this.errors = JSON.parse(response.responseText);
         this.render();

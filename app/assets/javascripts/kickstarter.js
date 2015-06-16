@@ -8,6 +8,7 @@ window.Kickstarter = {
     $("#navbar").html(navbar.render().$el);
     var projects = new Kickstarter.Collections.Projects();
     var categories = new Kickstarter.Collections.Categories();
+    categories.fetch();
 
     var router = new Kickstarter.Routers.Router ({
       $rootEl: $("#main"),

@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
-  validates :owner, :title, :description, presence: true
-  validates :goal_amount, :end_date, :image_url, presence: true
+  validates :owner, :title, :description, :category, presence: true
+  validates :goal_amount, :end_date, :image_path, presence: true
   validates :title, uniqueness: { scope: :owner }
   validates :goal_amount, numericality: { greater_than: 0 }
   validate :valid_end_date

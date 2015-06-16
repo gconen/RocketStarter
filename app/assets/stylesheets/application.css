@@ -215,6 +215,16 @@ nav {
   margin-bottom: 60px
 }
 
+#category-select select {
+  -webkit-appearance: none;
+  background: url(http://res.cloudinary.com/rocketstarter/image/upload/v1434473290/down_arrow_fg5lns.png) no-repeat 400px 9px;
+  background-color: white;
+  width: 100%;
+  font-size: 14px;
+  padding: 10px;
+  border-color: lightgrey;
+}
+
 .rewards {
   width: 350px;
 }
