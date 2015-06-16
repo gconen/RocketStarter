@@ -23,12 +23,17 @@ module Api
     private
 
     def project_params
-      project_params = params.require(:project)
-                .permit(:id, :title, :description, :goal_amount, :image_path)
+      project_params = params.require(:project).permit(
+        :id,
+        :title,
+        :description,
+        :goal_amount,
+        :image_path,
+        :category_id
+      )
       project_params[:goal_amount] = project_params[:goal_amount]
                                         .gsub(/[\$,]/, "")
                                         .to_i
-
       project_params[:rewards_attributes] = rewards_params
       project_params
     end

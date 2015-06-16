@@ -44,7 +44,8 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
 
   newProject: function () {
     var view = new Kickstarter.Views.ProjectForm({
-      model: new Kickstarter.Models.Project()
+      model: new Kickstarter.Models.Project(),
+      collection: this.categories
     });
     this._swapViews(view);
   },
