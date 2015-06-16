@@ -1,5 +1,6 @@
 .project-title {
   width:100%;
+  margin: 40px;
 }
 
 .project-title > h1, h2 {
@@ -8,6 +9,7 @@
 
 .project-title > h1 {
   font-size: 34px;
+  margin-bottom: 10px;
 }
 
 .project-show-main {
