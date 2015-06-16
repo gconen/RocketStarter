@@ -7,6 +7,6 @@ class CreateCategories < ActiveRecord::Migration
     end
 
     add_column :projects, :category_id, :integer
-    add_index, :projects, :category_id
+    add_index :projects, :category_id
   end
 end
