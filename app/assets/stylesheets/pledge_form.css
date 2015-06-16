@@ -1,11 +1,19 @@
 .pledge-form-group {
   display: block;
-  width: 675px;
+  width: 700px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 100px;
   border: 1px solid lightgrey;
   border-radius: 5px;
+  padding: 30px;
+}
+
+.pledge-form-group h1 {
+  font-size: 28px;
+  color: #2bde73;
+  margin-bottom: 15px;
+  font-weight: bold;
 }
 
 #pledge-amount {
