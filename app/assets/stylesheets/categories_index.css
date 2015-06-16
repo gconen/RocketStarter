@@ -1,0 +1,14 @@
+.categories-index-item {
+  float: left;
+  margin: 20px;
+  height: 300px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+}
+
+.categories-index-item a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
