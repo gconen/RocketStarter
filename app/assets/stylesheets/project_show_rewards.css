@@ -28,9 +28,9 @@
   opacity: .93;
 }
 
-.rewards-list-item .hover-text span {
+.rewards-list-item .hover-text h2 {
   display: block;
-  font-size: 36px;
+  font-size: 30px;
   position: absolute;
   top: 50%;
   margin-top: -18px;
@@ -38,11 +38,12 @@
   transition: font-size .2s ease;
 }
 
-.rewards-list-item:hover .hover-text span {
-  font-size: 24px;
+.rewards-list-item:hover .hover-text h2 {
+  font-size: 20px;
   margin-top: -12px;
 }
 
 .rewards-list-item h1 {
   font-weight: bold;
+  margin-bottom: 5px;
 }

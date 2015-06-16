@@ -12,11 +12,9 @@
       <p class="progress-big"><%= daysLeft %></p>
       <p class="progress-small">days to go</p>
     </li>
-    <li>
-      <a href="#projects/<%= project.id %>/pledges/new" class="button">Back This Project</a>
-    </li>
+    </ul>
+    <a href="#projects/<%= project.id %>/pledges/new" class="button fund-button">Back This Project</a>
   <% } else { %>
-    <li>
+    </ul>
       <p class="progress-big">Funding Closed</p>
   <% } %>
-</ul>
