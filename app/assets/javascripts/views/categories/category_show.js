@@ -15,5 +15,7 @@ Kickstarter.Views.CategoryShow = Backbone.CompositeView.extend({
   render: function () {
     this.$el.html(this.template({ category: this.model }));
     this.attachSubviews();
+
+    return this;
   }
 });

@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
   validates :owner, :title, :description, presence: true
-  validates :goal_amount, :end_date, presence: true
+  validates :goal_amount, :end_date, :image_url, presence: true
   validates :title, uniqueness: { scope: :owner }
   validates :goal_amount, numericality: { greater_than: 0 }
   validate :valid_end_date
@@ -20,6 +20,7 @@ class Project < ActiveRecord::Base
   belongs_to :category, inverse_of: :projects
 
   # Warning: N+1 query if used for N projects
+  # Todo: fix that
   def amount_raised
     pledges.sum(:amount)
   end
