@@ -172,7 +172,12 @@ nav {
 }
 
 .projects-index-item h1 {
-  font-weight: bold
+  font-weight: bold;
+}
+
+.category-title {
+  text-align: center;
+  font-size: 34px;
 }
 
 .project-title {
@@ -416,4 +421,19 @@ nav {
 
 .progress-big {
   font-size: 45px;
+}
+
+.categories-index-item {
+  float: left;
+  margin: 20px;
+  height: 300px;
+  width: 200px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+}
+
+.categories-index-item a {
+  display: block;
+  height: 100%;
+  width: 100%;
 }
