@@ -22,7 +22,7 @@
       value="<%= pledge.escape("project_id") %>">
 
     <div class="pledge-amount">
-      <label for="pledge-amount">Enter your pledge amount</label>
+      <label for="pledge-amount"><h2>Enter your pledge amount</h2></label>
       <input
         type="text"
         name="pledge[amount]"
@@ -34,13 +34,13 @@
     <ul class="rewards-options-list">
 
       <li class="rewards-options-list-item">
-        <label for="reward-nil">
+        <label for="reward-nil" class="clearfix">
           <input
             type="radio"
             name="pledge[reward_id]"
             value=""
             id="reward-nil">
-          <div class="reward-option-amount">No reward</div>
+          <h3 class="reward-option-amount">No reward</h3>
           <div class="reward-option-description">
             No thanks, I just want to help the project
           </div>
