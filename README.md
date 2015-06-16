@@ -82,7 +82,7 @@ ProjectsIndexItem view to display an uploaded image associated with the project.
 
 ### Bonus Features (TBD)
 - [ ] Markdown support for project descriptions
-- [ ] Tagging/categories for projects
+- [x] Tagging/categories for projects
 - [ ] Comments on projects
 - [ ] Mark projects to follow
 - [ ] Updates/Timeline for projects
