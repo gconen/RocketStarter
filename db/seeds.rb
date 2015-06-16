@@ -8,7 +8,7 @@
 
 voyages = Category.create!(title: "Voyages")
 vehicles = Category.create!(title: "Reusable Vehicles")
-stations = Category.create!(title: "Permanant Stations")
+stations = Category.create!(title: "Permanent Stations")
 
 guest = User.new(
   name: "George Guest",
