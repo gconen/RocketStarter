@@ -1,0 +1,41 @@
+.user-form-container {
+  width: 400px;
+  margin-left: auto;
+  margin-right:auto;
+  margin-top: 60px;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: lightgrey;
+}
+
+.user-form-container h1 {
+  font-size: 32px;
+  margin: 20px;
+}
+
+.user-form {
+  margin-left: auto;
+  margin-right:auto;
+  width: 360px;
+}
+
+.user-input {
+  width: 100%;
+  margin-top: 20px;
+}
+
+.user-button {
+  width: 360px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.user-form-link a {
+  color: blue;
+  font-weight: bold;
+}
