@@ -6,12 +6,12 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
 
   routes: {
     "(/)": "index",
-    "(/)projects(/)": "indexProjects",
     "(/)categories(/)": "indexCategories",
-    "(/)categories/:id(/)": "showCategory",
+    "(/)categories/:id(/)*query": "showCategory",
     "(/)projects/new(/)": "newProject",
     "(/)projects/:projectId/pledges/new*query": "newPledge",
-    "(/)projects/:id(/)": "showProject"
+    "(/)projects/:id(/)": "showProject",
+    "(/)projects(/)*query": "indexProjects",
   },
 
   index: function () {
@@ -27,9 +27,11 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
   },
 
   indexProjects: function () {
-    this.projects.fetch();
+    var sortBy = this._parseSortQuery();
+    this.projects.fetch({ data: { sort_by: sortBy }});
     var view = new Kickstarter.Views.ProjectsIndex({
-      collection: this.projects
+      collection: this.projects,
+      sortedBy: sortBy
     });
     this._swapViews(view);
   },
@@ -53,8 +55,10 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
   },
 
   showCategory: function (id) {
+    var sortBy = this._parseSortQuery();
     var view = new Kickstarter.Views.CategoryShow({
-      model: Kickstarter.categories.getOrFetch(id)
+      model: Kickstarter.categories.getOrFetch(id, sortBy),
+      sortedBy: sortBy
     });
     this._swapViews(view);
   },
@@ -66,10 +70,18 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
     this._swapViews(view);
   },
 
+  _parseSortQuery: function (query) {
+    var regexp = new RegExp(/\?.*sortBy=(.+)$/);
+    var queryResult = regexp.exec(window.location.hash);
+    if (queryResult) {
+      return queryResult[1];
+    }
+  },
+
   _swapViews: function (view) {
     this._currentView && this._currentView.remove();
     this._currentView = view;
     this.$rootEl.append(view.$el);
     view.render();
-  }
+  },
 });

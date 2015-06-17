@@ -1,18 +1,47 @@
 <h1 class="category-title">
   Showing
-  <select class="index-dropdown">
-    <option>Everything</option>
+  <select class="index-dropdown category-select">
+    <option value="">Everything</option>
     <% categories.each(function(category) { %>
 
       <option
-        data-category-id="<%= category.id %>"
-        <%= category_id === category.id ? "selected" : "" %>>
+        value="<%= category.id %>"
+        <%= categoryId == category.id ? "selected" : "" %>>
         <%= category.get("title") %>
       </option>
 
     <% }); %>
   </select>
-  &#8964;
+  <br>
+  Sorted by
+  <select class="index-dropdown sort-select">
+
+      <option value="Magic">
+        Magic
+      </option>
+      <option
+        value="Popularity"
+        <%= sortedBy === "Popularity" ? "selected" : ""%>>
+        Popularity
+      </option>
+      <option
+        value="Newest"
+        <%= sortedBy === "Newest" ? "selected" : ""%>>
+        Newest
+      </option>
+      <option
+        value="EndDate"
+        <%= sortedBy === "EndDate" ? "selected" : ""%>>
+        End Date
+      </option>
+      <option
+        value="MostFunded"
+        <%= sortedBy === "MostFunded" ? "selected" : ""%>>
+        Most Funded
+      </option>
+
+  </select>
+
 </h1>
 <ul class="projects-list clearfix">
 </ul>

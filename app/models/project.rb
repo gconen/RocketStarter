@@ -1,4 +1,32 @@
 class Project < ActiveRecord::Base
+
+  def self.sort_by(sort_string)
+    projects = Project.all
+    case sort_string
+    when "EndDate"
+      projects = projects.where("end_date > ?", Time.now).order(:end_date)
+    when "Newest"
+      projects = projects.order(created_at: :desc)
+    when "MostFunded"
+      projects = Project.joined_with_pledges
+        .order("SUM(pledges.amount)")
+
+    when "Popularity"
+      projects = Project.joined_with_pledges
+        .order("COUNT(DISTINCT pledges.sponsor_id)")
+    end
+
+    projects
+  end
+
+  def self.joined_with_pledges
+    Project.all
+      .joins("LEFT OUTER JOIN pledges ON pledges.project_id = projects.id")
+      .group("projects.id")
+  end
+
+
+
   validates :owner, :title, :description, :category, presence: true
   validates :goal_amount, :end_date, :image_path, presence: true
   validates :title, uniqueness: { scope: :owner }
