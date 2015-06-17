@@ -14,9 +14,7 @@
 }
 
 .category-title select:focus {
-  -webkit-appearance: none;
-  border: none;
-  background-color: transparent;
+  outline:none;
 }
 
 .category-title option {
