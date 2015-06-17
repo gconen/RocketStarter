@@ -5,7 +5,7 @@ Kickstarter.Views.ProjectsIndex = Backbone.CompositeView.extend({
   initialize: function (options) {
     this.categoryId = options.categoryId;
     this.sortedBy = options.sortedBy;
-    this.listenTo(this.collection, "add", this.addProject);
+    this.listenTo(this.collection, "sync", this.addProjects);
     this.listenTo(Kickstarter.categories, "sync", this.render);
   },
 
