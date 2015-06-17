@@ -1,29 +1,36 @@
-.category-title {
+.index-title {
   text-align: center;
   font-size: 36px;
   margin: 60px;
   line-height: 1.5;
 }
 
-.category-title select {
+.index-title select {
   -webkit-appearance: none;
   background-color: inherit;
   font-size: 31px;
   padding: 5px;
-  width: 330px;
+}
 
+.category-select {
+  width: 330px;
   background: url(http://res.cloudinary.com/rocketstarter/image/upload/v1434473290/down_arrow_fg5lns.png) no-repeat 291px 15px;
 }
 
-.category-title select:focus {
+.sort-select {
+  width: 231px;
+  background: url(http://res.cloudinary.com/rocketstarter/image/upload/v1434473290/down_arrow_fg5lns.png) no-repeat 195px 15px;
+}
+
+.index-title select:focus {
   outline:none;
 }
 
-.category-title option {
+.index-title option {
   -webkit-appearance: none;
 }
 
-.category-title select:hover {
+.index-title select:hover {
   cursor: pointer;
   color: grey;
 }
