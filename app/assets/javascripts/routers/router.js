@@ -1,18 +1,17 @@
 Kickstarter.Routers.Router = Backbone.Router.extend({
   initialize: function (options) {
     this.projects = options.projects;
-    this.categories = options.categories;
     this.$rootEl = options.$rootEl;
   },
 
   routes: {
     "(/)": "index",
-    "(/)projects(/)": "indexProjects",
     "(/)categories(/)": "indexCategories",
-    "(/)categories/:id(/)": "showCategory",
+    "(/)categories/:id(/)*query": "showCategory",
     "(/)projects/new(/)": "newProject",
     "(/)projects/:projectId/pledges/new*query": "newPledge",
-    "(/)projects/:id(/)": "showProject"
+    "(/)projects/:id(/)": "showProject",
+    "(/)projects(/)*query": "indexProjects",
   },
 
   index: function () {
@@ -20,17 +19,19 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
   },
 
   indexCategories: function () {
-    this.categories.fetch();
+    Kickstarter.categories.fetch();
     var view = new Kickstarter.Views.CategoriesIndex({
-      collection: this.categories
+      collection: Kickstarter.categories
     });
     this._swapViews(view);
   },
 
   indexProjects: function () {
-    this.projects.fetch();
+    var sortBy = this._parseSortQuery();
+    this.projects.fetch({ data: { sort_by: sortBy }});
     var view = new Kickstarter.Views.ProjectsIndex({
-      collection: this.projects
+      collection: this.projects,
+      sortedBy: sortBy
     });
     this._swapViews(view);
   },
@@ -48,15 +49,16 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
 
   newProject: function () {
     var view = new Kickstarter.Views.ProjectForm({
-      model: new Kickstarter.Models.Project(),
-      collection: this.categories
+      model: new Kickstarter.Models.Project()
     });
     this._swapViews(view);
   },
 
   showCategory: function (id) {
+    var sortBy = this._parseSortQuery();
     var view = new Kickstarter.Views.CategoryShow({
-      model: this.categories.getOrFetch(id)
+      model: Kickstarter.categories.getOrFetch(id, sortBy),
+      sortedBy: sortBy
     });
     this._swapViews(view);
   },
@@ -68,10 +70,18 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
     this._swapViews(view);
   },
 
+  _parseSortQuery: function (query) {
+    var regexp = new RegExp(/\?.*sortBy=(.+)$/);
+    var queryResult = regexp.exec(window.location.hash);
+    if (queryResult) {
+      return queryResult[1];
+    }
+  },
+
   _swapViews: function (view) {
     this._currentView && this._currentView.remove();
     this._currentView = view;
     this.$rootEl.append(view.$el);
     view.render();
-  }
+  },
 });

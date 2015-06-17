@@ -73,6 +73,9 @@ Backbone.CompositeView = Backbone.View.extend({
     selectorSubviews.splice(selectorSubviews.indexOf(subview), 1);
   },
 
+  //I wrote this earlier in the course, and found that the same functionality
+  //would be useful in my capstone.
+
   removeSubviews: function (selector) {
     var selectorSubviews = this.subviews(selector);
     selectorSubviews.each (function (subview) {

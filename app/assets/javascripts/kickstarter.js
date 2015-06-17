@@ -7,13 +7,12 @@ window.Kickstarter = {
     var navbar = new Kickstarter.Views.Navbar();
     $("#navbar").html(navbar.render().$el);
     var projects = new Kickstarter.Collections.Projects();
-    var categories = new Kickstarter.Collections.Categories();
-    categories.fetch();
+    Kickstarter.categories = new Kickstarter.Collections.Categories();
+    Kickstarter.categories.fetch();
 
     var router = new Kickstarter.Routers.Router ({
       $rootEl: $("#main"),
       projects: projects,
-      categories: categories
     });
 
     Backbone.history.start();

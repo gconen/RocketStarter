@@ -60,7 +60,9 @@ Kickstarter.Views.ProjectForm = Backbone.CompositeView.extend({
     }));
     this.addSubview(
       "#category-select",
-      new Kickstarter.Views.CategorySelect({ collection: this.collection })
+      new Kickstarter.Views.CategorySelect({
+        collection: Kickstarter.categories
+      })
     );
     this.addRewardInputs();
 
@@ -73,8 +75,6 @@ Kickstarter.Views.ProjectForm = Backbone.CompositeView.extend({
     this.model.set(formData.project, { parse: true });
     this.model.save(formData, {
       success: function () {
-        var category = this.collection.get(this.model.get("category_id"));
-        category.projects().add(this.model);
         Backbone.history.navigate("#", { trigger: true });
       }.bind(this),
       error: function (model, response) {

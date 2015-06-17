@@ -1,3 +1,40 @@
+.index-title {
+  text-align: center;
+  font-size: 36px;
+  margin: 60px;
+  line-height: 1.5;
+}
+
+.index-title select {
+  -webkit-appearance: none;
+  background-color: inherit;
+  font-size: 31px;
+  padding: 5px;
+}
+
+.category-select {
+  width: 330px;
+  background: url(http://res.cloudinary.com/rocketstarter/image/upload/v1434473290/down_arrow_fg5lns.png) no-repeat 291px 15px;
+}
+
+.sort-select {
+  width: 231px;
+  background: url(http://res.cloudinary.com/rocketstarter/image/upload/v1434473290/down_arrow_fg5lns.png) no-repeat 195px 15px;
+}
+
+.index-title select:focus {
+  outline:none;
+}
+
+.index-title option {
+  -webkit-appearance: none;
+}
+
+.index-title select:hover {
+  cursor: pointer;
+  color: grey;
+}
+
 .projects-list {
   width: 1116px;
   margin: auto;

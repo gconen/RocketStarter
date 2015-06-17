@@ -6,7 +6,9 @@ module Api
     end
 
     def show
-      @category = Category.includes(:projects, projects: :owner).find(params[:id])
+      @category = Category.find(params[:id])
+      @projects = Project.sort_by(params[:sort_by])
+                  .where("category_id = ?", params[:id])
       render :show
     end
   end
