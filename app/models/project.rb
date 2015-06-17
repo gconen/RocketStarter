@@ -10,7 +10,6 @@ class Project < ActiveRecord::Base
     when "MostFunded"
       projects = Project.joined_with_pledges
         .order("SUM(pledges.amount)")
-
     when "Popularity"
       projects = Project.joined_with_pledges
         .order("COUNT(DISTINCT pledges.sponsor_id)")
