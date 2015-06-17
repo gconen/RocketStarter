@@ -1,3 +1,33 @@
+.category-title {
+  text-align: center;
+  font-size: 36px;
+  margin: 60px;
+}
+
+.category-title select {
+  -webkit-appearance: none;
+  border: none;
+  background-color: inherit;
+  font: inherit;
+  border-bottom: 1px solid black;
+  border-radius: 0;
+}
+
+.category-title select:focus {
+  -webkit-appearance: none;
+  border: none;
+  background-color: transparent;
+}
+
+.category-title option {
+  -webkit-appearance: none;
+}
+
+.category-title select:hover {
+  cursor: pointer;
+  color: grey;
+}
+
 .projects-list {
   width: 1116px;
   margin: auto;

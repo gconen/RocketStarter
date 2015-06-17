@@ -1,2 +1,18 @@
+<h1 class="category-title">
+  Showing
+  <select class="index-dropdown">
+    <option>Everything</option>
+    <% categories.each(function(category) { %>
+
+      <option
+        data-category-id="<%= category.id %>"
+        <%= category_id === category.id ? "selected" : "" %>>
+        <%= category.get("title") %>
+      </option>
+
+    <% }); %>
+  </select>
+  &#8964;
+</h1>
 <ul class="projects-list clearfix">
 </ul>

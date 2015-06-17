@@ -1,7 +1,6 @@
 Kickstarter.Routers.Router = Backbone.Router.extend({
   initialize: function (options) {
     this.projects = options.projects;
-    this.categories = options.categories;
     this.$rootEl = options.$rootEl;
   },
 
@@ -20,9 +19,9 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
   },
 
   indexCategories: function () {
-    this.categories.fetch();
+    Kickstarter.categories.fetch();
     var view = new Kickstarter.Views.CategoriesIndex({
-      collection: this.categories
+      collection: Kickstarter.categories
     });
     this._swapViews(view);
   },
@@ -48,15 +47,14 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
 
   newProject: function () {
     var view = new Kickstarter.Views.ProjectForm({
-      model: new Kickstarter.Models.Project(),
-      collection: this.categories
+      model: new Kickstarter.Models.Project()
     });
     this._swapViews(view);
   },
 
   showCategory: function (id) {
     var view = new Kickstarter.Views.CategoryShow({
-      model: this.categories.getOrFetch(id)
+      model: Kickstarter.categories.getOrFetch(id)
     });
     this._swapViews(view);
   },

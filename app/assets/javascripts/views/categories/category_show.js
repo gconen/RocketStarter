@@ -6,7 +6,8 @@ Kickstarter.Views.CategoryShow = Backbone.CompositeView.extend({
     this.addSubview(
       ".projects-index",
       new Kickstarter.Views.ProjectsIndex ({
-        collection: this.model.projects()
+        collection: this.model.projects(),
+        categoryId: this.model.id
       })
     );
     this.listenTo(this.model, "sync", this.render.bind(this));
