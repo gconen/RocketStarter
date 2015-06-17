@@ -58,6 +58,9 @@
   margin-bottom: 8px;
 }
 
+.progress-list {
+  -webkit-padding-start: 24px;
+}
 
 .progress-big {
   font-size: 45px;

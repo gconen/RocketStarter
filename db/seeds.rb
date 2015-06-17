@@ -103,7 +103,7 @@ sert.save!
 
 sert_project = sert.owned_projects.new(
   title: "Solar Power Satellite",
-  goal_amount: 10000000,
+  goal_amount: 100000,
   description: "Think of it, the infinite free power of the sun, beaming down for all to use. We'll launch a fleet of satellites with large solar panel arrays which will collect the copious solar power available above the atmosphere, which will be beamed down via a microwave transmitter (which is totally safe, and not at all a death ray) to collection stations on earth, to be distributed freely for the good of all mankind.",
   end_date: Time.now + 30.days,
   image_path: "v1434408298/Solar_natdru_nenrsj.jpg",
@@ -165,7 +165,7 @@ nasa.save!
 
 maven = nasa.owned_projects.new(
   title: "MAVEN",
-  goal_amount: 10000000,
+  goal_amount: 100000,
   description: "The Mars Atmosphere and Volatile EvolutioN Mission, or MAVEN, is a probe designed to study the Martian atmosphere. It's believed by most scientists that Mars once had a much thicker atmosphere than it has now. By studying the atmosphere now, and particularly how the atmosphere interacts with solar wind, hopefully we'll be able to determine what lead to the thicker atmosphere being lost.",
   end_date: Time.now + 28.days,
   image_path: "v1434579704/Artist_concept_of_MAVEN_spacecraft_atqswd.jpg",
@@ -204,31 +204,22 @@ rel.save!
 
 skylon = rel.owned_projects.new(
   title: "Skylon Spaceplane",
-  goal_amount: 3500000,
+  goal_amount: 350000,
   description: "The Skylon spaceplane is a revolutionary design for a single stage to orbit (SSTO) craft, which will dramatically reduce the price of lifting satellites and other objects to low earth orbit. It takes advantage of the innovative new Synergistic Air-Breathing Rocket Engine (SABRE), a revolutionary rocket design which, instead of being solely dependent on liquid oxygen, can use oxygen from the air while in the atmosphere, resulting in significant weight savings.",
   end_date: Time.now + 14.days,
   image_path: "v1434581583/Skylon_diagram_rz01ex.jpg",
   category_id: vehicles.id
 )
 
+
 skylon.rewards.new(
-  amount: 1,
-  description: "We'll be listing all contributors (at this and higher levels) for a special thank you on our website."
+  amount: 35,
+  description: "You can launch your own mini-satellite (1 kg or less) using the Skylon spaceplane."
 )
 
 skylon.rewards.new(
-  amount: 20,
-  description: "A NASA pin, delivered with a thank you letter from the project team lead."
-)
-
-skylon.rewards.new(
-  amount: 150,
-  description: "An invitation to observe the launch at our Cape Canaveral launch facility."
-)
-
-skylon.rewards.new(
-  amount: 700,
-  description: "Honorary coauthorship credit on one of the scientific papers resulting from the project."
+  amount: 4000,
+  description: "You can experience space for yourself in out specially designed habitation module launched by the Skylon spaceplane."
 )
 
 skylon.save!
