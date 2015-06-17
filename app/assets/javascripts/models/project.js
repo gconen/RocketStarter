@@ -31,10 +31,10 @@ Kickstarter.Models.Project = Backbone.Model.extend({
   },
 
   shortDescription: function () {
-    if (this.escape("description").length < 100) {
+    if (this.escape("description").length < 113) {
       return this.escape("description");
     } else {
-      var shorter = this.escape("description").slice(0, 97);
+      var shorter = this.escape("description").slice(0, 110);
       shorter += "...";
       return shorter;
     }
