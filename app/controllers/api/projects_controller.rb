@@ -1,7 +1,7 @@
 module Api
   class ProjectsController < ApiController
     def index
-      @projects = Project.all.includes(:owner)
+      @projects = Project.sort_by(params[:sort_by])
       render :index
     end
 
