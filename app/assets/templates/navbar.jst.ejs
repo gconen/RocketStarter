@@ -6,6 +6,11 @@
   <a href="#projects/new">Start</a>
 </div>
 <div class="nav-right">
+  <div id="hello" class="nav-item">
+    <div id="hello" class="nav-item">
+      Logged in as <%= $("#current-user-name").attr("content") %>
+    </div>
+  </div>
   <div id="log-out-link" class="nav-item nav-button">
     <form action="/session" method="post">
       <input

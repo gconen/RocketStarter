@@ -39,3 +39,8 @@
   color: blue;
   font-weight: bold;
 }
+
+.user-form-link {
+  text-align: center;
+  margin-bottom: 10px;
+}

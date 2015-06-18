@@ -36,6 +36,12 @@ nav {
   font-family: '.HelveticaNeueDeskInterface-Regular';
 }
 
+#hello {
+  padding-top: 11px;
+  font-size: 14px;
+  font-family: '.HelveticaNeueDeskInterface-Regular';
+}
+
 .nav-right {
   position: absolute;
   right: 20px;

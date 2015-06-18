@@ -75,7 +75,10 @@ Kickstarter.Views.ProjectForm = Backbone.CompositeView.extend({
     this.model.set(formData.project, { parse: true });
     this.model.save(formData, {
       success: function () {
-        Backbone.history.navigate("#", { trigger: true });
+        Backbone.history.navigate(
+          "#projects/" + this.model.id,
+          { trigger: true }
+        );
       }.bind(this),
       error: function (model, response) {
         this.errors = JSON.parse(response.responseText);
