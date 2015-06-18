@@ -6,7 +6,7 @@ Kickstarter.Views.ProjectProgress = Backbone.View.extend({
   },
 
   render: function () {
-    var millisecondsLeft = Date.parse(this.model.get("end_date")) - Date.now();
+    var millisecondsLeft = Date.parse(this.model.escape("end_date")) - Date.now();
     var daysLeft = Math.ceil(millisecondsLeft / 86400000); // ms per day (1000 * 60 * 60 * 24)
     this.$el.html(this.template({
       project: this.model,

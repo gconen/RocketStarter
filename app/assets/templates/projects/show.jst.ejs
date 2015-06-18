@@ -1,11 +1,11 @@
 <header class="project-show-header">
     <div class="project-title">
-      <h1><%= project.get("title") %></h1>
+      <h1><%= project.escape("title") %></h1>
       <h2>by <%= project.owner().escape("name") %></h2>
     </div>
     <div class="project-header-container clearfix">
-      <% if (project.get("image_path")) { %>
-        <img src="https://res.cloudinary.com/rocketstarter/image/upload/h_450,w_900/<%= project.get("image_path") %>">
+      <% if (project.escape("image_path")) { %>
+        <img src="https://res.cloudinary.com/rocketstarter/image/upload/h_450,w_900/<%= project.escape("image_path") %>">
       <% } %>
       <div class="progress">
       </div>

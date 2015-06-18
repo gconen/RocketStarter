@@ -1,5 +1,5 @@
 <a href="#projects/<%= project.escape("id") %>">
-  <img src="https://res.cloudinary.com/rocketstarter/image/upload/h_160,w_320/<%= project.get("image_path") %>">
+  <img src="https://res.cloudinary.com/rocketstarter/image/upload/h_160,w_320/<%= project.escape("image_path") %>">
 </a>
 <h1><a href="#projects/<%= project.escape("id") %>">
   <%= project.escape("title") %>

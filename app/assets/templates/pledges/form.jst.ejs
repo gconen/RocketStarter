@@ -1,5 +1,5 @@
 <div class="project-title">
-  <h1><%= pledge.project().get("title") %></h1>
+  <h1><%= pledge.project().escape("title") %></h1>
   <h2>by <%= pledge.project().owner().escape("name") %></h2>
 </div>
 
