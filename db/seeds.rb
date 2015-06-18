@@ -1,10 +1,4 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+
 
 voyages = Category.create!(title: "Voyages")
 vehicles = Category.create!(title: "Reusable Vehicles")
@@ -102,7 +96,7 @@ sert = User.new(
 sert.save!
 
 sert_project = sert.owned_projects.new(
-  title: "Solar Power Satellite",
+  title: "Solar Power Satellites",
   goal_amount: 100000,
   description: "Think of it, the infinite free power of the sun, beaming down for all to use. We'll launch a fleet of satellites with large solar panel arrays which will collect the copious solar power available above the atmosphere, which will be beamed down via a microwave transmitter (which is totally safe, and not at all a death ray) to collection stations on earth, to be distributed freely for the good of all mankind.",
   end_date: Time.now + 30.days,
