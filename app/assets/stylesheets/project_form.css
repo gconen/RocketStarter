@@ -14,6 +14,10 @@
   height: 70px;
 }
 
+#upload-button {
+  margin-bottom: 5px;
+}
+
 .submit-button {
   margin-top: 15px;
   margin-left: 470px;
@@ -45,6 +49,7 @@
   background-color: lightgreen;
   border-radius: 5px;
   position: relative;
+  font-family: "Helvetica Neue"
 }
 
 .duration-rec {
@@ -60,6 +65,7 @@
   border: 1px dashed lightgrey;
   border-radius: 5px;
   padding: 35px;
+  font-family: "Helvetica Neue";
 }
 
 #add-reward:hover {
@@ -128,4 +134,9 @@
 .close-button {
   position: absolute;
   right: 0;
+}
+
+.form-instructions {
+  margin-top: 14px;
+  font-size: 14px;
 }
