@@ -1,4 +1,8 @@
-
+Category.delete_all
+User.delete_all
+Project.delete_all
+Reward.delete_all
+Pledge.delete_all
 
 voyages = Category.create!(title: "Voyages")
 vehicles = Category.create!(title: "Reusable Vehicles")
@@ -232,7 +236,7 @@ skylon_reward = skylon.rewards.new(
 
 skylon.rewards.new(
   amount: 4000,
-  description: "You can experience space for yourself in out specially designed habitation module launched by the Skylon spaceplane."
+  description: "You can experience space for yourself in our specially designed habitation module launched by the Skylon spaceplane."
 )
 
 skylon.save!
