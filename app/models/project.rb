@@ -14,7 +14,7 @@ class Project < ActiveRecord::Base
           SUM(pledges.amount) DESC
         SQL
         )
-        #CASE WHEN to solve problems with were NULL values land in order by
+        #CASE WHEN to solve problems with were NULL values land in ORDER BY
     when "Popularity"
       projects = Project.joined_with_pledges
         .order("COUNT(DISTINCT pledges.sponsor_id) DESC")
