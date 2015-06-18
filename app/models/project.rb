@@ -9,12 +9,16 @@ class Project < ActiveRecord::Base
       projects = projects.order(created_at: :desc)
     when "MostFunded"
       projects = Project.joined_with_pledges
-        .order("SUM(pledges.amount)")
+        .order(<<-SQL
+          (CASE WHEN SUM(pledges.amount) IS NULL THEN 1 ELSE 0 END),
+          SUM(pledges.amount) DESC
+        SQL
+        )
+        #CASE WHEN to solve problems with were NULL values land in order by
     when "Popularity"
       projects = Project.joined_with_pledges
-        .order("COUNT(DISTINCT pledges.sponsor_id)")
+        .order("COUNT(DISTINCT pledges.sponsor_id) DESC")
     end
-
     projects
   end
 
