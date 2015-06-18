@@ -1,8 +1,10 @@
 .index-title {
   text-align: center;
   font-size: 36px;
-  margin: 60px;
   line-height: 1.5;
+  padding: 130px;
+  border-bottom: 1px solid lightgrey;
+  background-image: url("http://res.cloudinary.com/rocketstarter/image/upload/v1434660435/sdo_views_of_may_5_2015_x-class_flare_cffjyr_bb5q1s.jpg");
 }
 
 .index-title select {
