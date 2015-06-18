@@ -15,10 +15,12 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
   },
 
   index: function () {
+    $('body').removeClass("grey-background");
     this.indexCategories();
   },
 
   indexCategories: function () {
+    $('body').removeClass("grey-background");
     Kickstarter.categories.fetch();
     var view = new Kickstarter.Views.CategoriesIndex({
       collection: Kickstarter.categories
@@ -27,6 +29,7 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
   },
 
   indexProjects: function () {
+    $('body').removeClass("grey-background");
     var sortBy = this._parseSortQuery();
     this.projects.fetch({ data: { sort_by: sortBy }});
     var view = new Kickstarter.Views.ProjectsIndex({
@@ -37,6 +40,7 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
   },
 
   newPledge: function (projectId) {
+    $('body').addClass("grey-background");
     var project = this.projects.getOrFetch(projectId);
     var pledge = new Kickstarter.Models.Pledge({
       project: project,
@@ -48,6 +52,7 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
   },
 
   newProject: function () {
+    $('body').addClass("grey-background");
     var view = new Kickstarter.Views.ProjectForm({
       model: new Kickstarter.Models.Project()
     });
@@ -55,6 +60,7 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
   },
 
   showCategory: function (id) {
+    $('body').removeClass("grey-background");
     var sortBy = this._parseSortQuery();
     var view = new Kickstarter.Views.CategoryShow({
       model: Kickstarter.categories.getOrFetch(id, sortBy),
@@ -64,6 +70,7 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
   },
 
   showProject: function (id) {
+    $('body').removeClass("grey-background");
     var view = new Kickstarter.Views.ProjectShow({
       model: this.projects.getOrFetch(id)
     });

@@ -42,11 +42,12 @@
   border: 1px solid lightgrey;
   border-radius: 5px;
   margin-bottom: 100px;
+  background-color: white;
 }
 
 .project-form-element {
   margin: 20px;
-  background-color: lightgreen;
+  background-color: #F7FAFA;
   border-radius: 5px;
   position: relative;
   font-family: "Helvetica Neue"
