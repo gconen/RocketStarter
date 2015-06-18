@@ -2,6 +2,7 @@
   font-size: 36px;
   margin: 60px;
   text-align: center;
+  color: #EEEEEE;
 }
 
 .categories-index-item {
@@ -17,6 +18,8 @@
   font-size: 22px;
   transition: background-color .3s;
   transition-timing-function: ease;
+  opacity: .85;
+  font-family: "Helvetica Neue";
 }
 
 .categories-index-item:hover:nth-child(3n+0) {
@@ -60,6 +63,7 @@
   margin-bottom: -11px;
   width: 100%;
   transition: bottom .3s;
+  color: white;
 }
 
 .categories-index-item:hover .non-hover-text{
