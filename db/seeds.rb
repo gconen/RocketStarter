@@ -91,6 +91,32 @@ users.each do |user|
   pledge.save(validate: false)
 end
 
+jeb_project = jeb.owned_projects.new(
+  title: "Rescue Jeb from Space",
+  goal_amount: 5000,
+  description: "With your help, we managed to do something incredible, and send Jebidiah to into orbit. Unfortunately, he's now completely out of fuel, and has no way to return to the ground. Please help so Jebidiah isn't trapped in space forever.",
+  end_date: Time.now + 30.days,
+  image_path: "v1434672255/freeflyer_nasa_big_wcsxpi.jpg",
+  category_id: voyages.id
+)
+
+jeb_project.rewards.new(
+  amount: 1,
+  description: "Jebidiah will be extremely grateful."
+)
+
+jeb_project.rewards.new(
+  amount: 25,
+  description: "Just as soon as he finishes kissing the ground that he feared he'd never see again, Jebidiah will kiss your feet in gratitude."
+)
+
+jeb_reward = jeb_project.rewards.new(
+  amount: 2000,
+  description: "Back by popular demand, the genuine space agency exploded rocket debris. This time, you get exploded rocket debris that's even been to space!"
+)
+
+jeb_project.save!
+
 sert = User.new(
   name: "Space Energy Research Team",
   email: "sert@example.com",
