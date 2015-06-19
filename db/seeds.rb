@@ -57,7 +57,7 @@ jeb.name = "Jebidiah's Space Agency and Junkyard Supply Co"
 jeb.save!
 
 jeb_project = jeb.owned_projects.new(
-  title: "Getting into space",
+  title: "Getting into Space",
   goal_amount: 5000,
   description: "We've been told that we can't officially call ourselves a space agency until we've actually been to space. So we're raising money to build a rocket to get there! Give us some help at making this first step into rocket design.",
   end_date: Time.now - 1.day,
