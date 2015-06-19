@@ -71,3 +71,17 @@ input[type=radio] {
   margin: 30px;
   width: 470px;
 }
+
+.pledge-title {
+  width:100%;
+  margin: 40px;
+}
+
+.pledge-title > h1, h2 {
+  text-align: center;
+}
+
+.pledge-title > h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
