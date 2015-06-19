@@ -82,6 +82,9 @@ jeb_reward = jeb_project.rewards.new(
 
 jeb_project.save!({ validate: false })
 
+jeb_project.created_at = Time.now - 31.days
+jeb_project.save!({ validate: false })
+
 users.each do |user|
   pledge = user.pledges.new(
     amount: 2345,
@@ -95,7 +98,7 @@ jeb_project = jeb.owned_projects.new(
   title: "Rescue Jeb from Space",
   goal_amount: 5000,
   description: "With your help, we managed to do something incredible, and send Jebidiah to into orbit. Unfortunately, he's now completely out of fuel, and has no way to return to the ground. Please help so Jebidiah isn't trapped in space forever.",
-  end_date: Time.now + 30.days,
+  end_date: Time.now + 29.days,
   image_path: "v1434672255/freeflyer_nasa_big_wcsxpi.jpg",
   category_id: voyages.id
 )
@@ -115,6 +118,9 @@ jeb_reward = jeb_project.rewards.new(
   description: "Back by popular demand, the genuine space agency exploded rocket debris. This time, you get exploded rocket debris that's even been to space!"
 )
 
+jeb_project.save!
+
+jeb_project.created_at = Time.now - 1.day
 jeb_project.save!
 
 sert = User.new(
@@ -228,6 +234,9 @@ maven_reward = maven.rewards.new(
 
 maven.save!
 
+maven.created_at = Time.now - 2.days
+maven.save!
+
 users.take(23).each do |user|
   pledge = user.pledges.new(
     amount: 1100,
@@ -265,6 +274,9 @@ skylon.rewards.new(
   description: "You can experience space for yourself in our specially designed habitation module launched by the Skylon spaceplane."
 )
 
+skylon.save!
+
+skylon.created_at = Time.now - 6.days
 skylon.save!
 
 users.take(15).each do |user|
