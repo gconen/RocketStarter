@@ -62,10 +62,9 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
 
   search: function (params) {
     var paramsArray = params.split("+");
-    var paramsJson = JSON.stringify(paramsArray);
     $.ajax({
       url: "api/projects/search",
-      data: paramsJson
+      data: {searchParams: paramsArray}
       });
   },
 
