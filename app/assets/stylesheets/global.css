@@ -74,13 +74,14 @@ input {
 }
 
 .errors {
-  background-color: #FF3838;
+  background-color:red;
   width: 300px;
   margin: auto;
   padding: 18px;
   font-size: 18px;
   font-family: "Helvetica Neue";
   border-radius: 5px;
+  color: #F4F4F4;
 }
 
 

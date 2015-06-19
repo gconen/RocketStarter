@@ -7,6 +7,7 @@
   border-style: solid;
   border-radius: 5px;
   border-color: lightgrey;
+  background-color: rgba(218, 218, 218, 0.3);
 }
 
 .user-form-container h1 {
