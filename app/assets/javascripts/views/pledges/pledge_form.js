@@ -51,10 +51,11 @@ Kickstarter.Views.PledgeForm = Backbone.CompositeView.extend({
   save: function (event) {
     event.preventDefault();
     var formData = this.$(".pledge-form").serializeJSON();
+    var amount = formData.pledge.amount;
     this.model.save(formData, {
       success: function () {
         Backbone.history.navigate(
-          "#projects/" + this.model.get("project_id"),
+          "#projects/" + this.model.get("project_id") + "?" + amount,
           { trigger: true }
         );
       }.bind(this),

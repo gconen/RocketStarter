@@ -16,6 +16,7 @@
 //= require backbone
 //= require serializejson
 //= require composite_view
+//= require countUp
 //= require kickstarter
 //= require_tree ../templates
 //= require_tree ./models
