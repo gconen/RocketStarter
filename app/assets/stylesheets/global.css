@@ -72,3 +72,22 @@ input {
 .hidden {
   display: none;
 }
+
+.errors {
+  background-color: #FF3838;
+  width: 300px;
+  margin: auto;
+  padding: 18px;
+  font-size: 18px;
+  font-family: "Helvetica Neue";
+  border-radius: 5px;
+}
+
+
+.errors li {
+  margin-bottom: 5px;
+}
+
+.errors li:last-child {
+  margin: 0;
+}
