@@ -2,7 +2,7 @@ nav {
   position: relative;
   border-bottom: 1px solid grey;
   height: 60px;
-  background-color: #EEEEEE;
+  background-color: #F8F8F8;
 }
 
 .logo {
@@ -62,4 +62,18 @@ nav {
   border:none;
   background-color: transparent;
   font-size: 14px;
+}
+
+.search-bar {
+  width: 500px;
+  border-left: 1px solid lightgrey;
+}
+
+.search-bar input {
+  background-color: transparent;
+  border: none;
+}
+
+.search-bar input:focus {
+  outline:none;
 }

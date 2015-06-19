@@ -12,6 +12,7 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
     "(/)projects/:projectId/pledges/new*query": "newPledge",
     "(/)projects/:id(/)": "showProject",
     "(/)projects(/)*query": "indexProjects",
+    "(/)search/:params": "search"
   },
 
   index: function () {
@@ -57,6 +58,15 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
       model: new Kickstarter.Models.Project()
     });
     this._swapViews(view);
+  },
+
+  search: function (params) {
+    var paramsArray = params.split("+");
+    var paramsJson = JSON.stringify(paramsArray);
+    $.ajax({
+      url: "api/projects/search",
+      data: paramsJson
+      });
   },
 
   showCategory: function (id) {

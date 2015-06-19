@@ -20,6 +20,10 @@ module Api
       end
     end
 
+    def search
+      fail
+    end
+
     private
 
     def project_params

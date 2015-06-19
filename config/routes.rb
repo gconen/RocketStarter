@@ -3,7 +3,9 @@ Rails.application.routes.draw do
   resources :users, only: [:new, :create]
   resource :session, only: [:new, :create, :destroy]
   namespace :api, defaults: { format: :json } do
-    resources :projects, except: [:new, :edit]
+    resources :projects, except: [:new, :edit] do
+      get :search, on: :collection
+    end
     resources :pledges, only: [:create]
     resources :categories, only: [:show, :index]
   end
