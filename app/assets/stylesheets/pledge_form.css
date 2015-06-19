@@ -28,6 +28,10 @@
 
 #pledge-amount {
   font-size: 28px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 input[type=radio] {

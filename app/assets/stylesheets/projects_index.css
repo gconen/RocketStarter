@@ -10,6 +10,7 @@
 
 .index-title select {
   -webkit-appearance: none;
+  -moz-appearance: none;
   background-color: inherit;
   font-size: 31px;
   padding: 5px;
