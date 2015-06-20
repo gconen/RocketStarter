@@ -1,10 +1,10 @@
-# Phase 6: Search
+# Phase 6: Image Upload
 
 ## Rails
 ### Models
+* Add image_path to Project
 
 ### Controllers
-Api::ProjectsController (search)
 
 ### Views
 
@@ -14,6 +14,9 @@ Api::ProjectsController (search)
 ### Collections
 
 ### Views
-ProjectSearch (composite, contains ProjectsIndex)
+* Update ProjectShow
+* Update ProjectsIndexItem
+* Update ProjectForm
 
 ## Gems/Libraries
+* Cloudinary
