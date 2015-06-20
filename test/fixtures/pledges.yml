@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project_id: 1
+  sponsor_id: 1
+  amount: 1
+
+two:
+  project_id: 1
+  sponsor_id: 1
+  amount: 1

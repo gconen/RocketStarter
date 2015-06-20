@@ -1,23 +1,23 @@
 # RocketStarter
 
-[Heroku link][heroku]
+[Live link][rocket]
 
-[heroku]: #
+[rocket]: http://www.rocketstarter.us/
 
 ## Minimum Viable Product
 RocketStarter duplicates the functionality of Kickstarter. Users can:
 
-- [ ] Sign up and sign in
-- [ ] Create projects to request funding
-- [ ] View other users' projects
-- [ ] Fund other users' projects
-- [ ] Define rewards for certain funding levels on their projects
-- [ ] Select a reward when funding a project
-- [ ] See how much funding projects have received
-- [ ] Set end dates for project funding requests
-- [ ] Stop funding after project end dates.
-- [ ] Search for projects
-- [ ] Upload images for headers and icons for their project
+- [x] Sign up and sign in
+- [x] Create projects to request funding
+- [x] View other users' projects
+- [x] Fund other users' projects
+- [x] Define rewards for certain funding levels on their projects
+- [x] Select a reward when funding a project
+- [x] See how much funding projects have received
+- [x] Set end dates for project funding requests
+- [x] Stop funding after project end dates
+- [x] Upload images for headers and icons for their project
+- [x] Categories for projects
 
 ## Design Docs
 * [View Wireframes][views]
@@ -67,22 +67,23 @@ projects where funding has ended.
 
 [Details][phase-five]
 
-### Phase 6: Search (~1 day)
-I will add a search route for projects and add backbone views to allow users to
-search for projects. By the end of this phase, users will be able to search for
-projects who titles contain a given search string.
+### Phase 6: Image Upload (~1 day)
+I will use cloudinary to add image uploads, and update the ProjectShow and
+ProjectsIndexItem view to display an uploaded image associated with the project.
 
 [Details][phase-six]
 
-### Phase 7: Image Upload (~1 day)
-I will use filepicker.io to add image uploads, and update the ProjectShow and
-ProjectsIndexItem view to display an uploaded image associated with the project.
+### Phase 7: Categories (~1 day)
+I will add categories for projects, which will be selected by the project's 
+creator. Users will be able to view the all the projects in a category (as well as
+all the projects at once) and sort projects within categories by a variety of 
+attributes.
 
 [Details][phase-seven]
 
 ### Bonus Features (TBD)
+- [ ] Search for projects
 - [ ] Markdown support for project descriptions
-- [ ] Tagging/categories for projects
 - [ ] Comments on projects
 - [ ] Mark projects to follow
 - [ ] Updates/Timeline for projects

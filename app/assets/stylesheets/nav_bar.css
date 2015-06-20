@@ -1,0 +1,65 @@
+nav {
+  position: relative;
+  border-bottom: 1px solid grey;
+  height: 60px;
+  background-color: #EEEEEE;
+}
+
+.logo {
+  font-size: 30px;
+  float: left;
+  margin: 13px;
+  font-weight: 900;
+}
+
+.logo span {
+  color: #2BDE27;
+}
+
+.nav-item {
+  float: left;
+  height: 100%;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.nav-item * {
+  margin: auto;
+}
+
+.nav-button:hover {
+  background-color: lightgrey;
+}
+
+.nav-button a {
+  display: block;
+  text-align: center;
+  padding-top: 21px;
+  padding-bottom: 22px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 14px;
+  font-family: 'Helvetica Neue';
+}
+
+#hello {
+  padding-top: 12px;
+  font-size: 14px;
+  font-family: 'Helvetica Neue';
+}
+
+.nav-right {
+  position: absolute;
+  right: 20px;
+  height: 100%;
+}
+
+#log-out-link * {
+  height: 100%
+}
+
+.log-out-button {
+  border:none;
+  background-color: transparent;
+  font-size: 14px;
+}

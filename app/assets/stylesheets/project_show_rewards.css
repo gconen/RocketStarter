@@ -1,0 +1,49 @@
+.rewards {
+  width: 350px;
+}
+
+.rewards-list-item {
+  position: relative;
+  margin: 25px;
+  background-color: lightgrey;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 15px;
+}
+
+.rewards-list-item .hover-text {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom:0;
+  width: 100%;
+  background-color: #2bde73;
+  text-align: center;
+  opacity: 0;
+  transition: opacity .2s ease;
+}
+
+.rewards-list-item:hover .hover-text {
+  opacity: .93;
+}
+
+.rewards-list-item .hover-text h2 {
+  display: block;
+  font-size: 30px;
+  position: absolute;
+  top: 50%;
+  margin-top: -18px;
+  width: 100%;
+  transition: font-size .2s ease;
+}
+
+.rewards-list-item:hover .hover-text h2 {
+  font-size: 20px;
+  margin-top: -12px;
+}
+
+.rewards-list-item h1 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}

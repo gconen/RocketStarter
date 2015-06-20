@@ -1,0 +1,56 @@
+<img class="background-image" src="http://res.cloudinary.com/rocketstarter/image/upload/v1434654032/pia18308_full_jfgrmu.jpg">
+<div class="user-form-container">
+  <h1>Log In</h1>
+
+  <% if flash[:errors] %>
+    <ul class="errors">
+      <% flash[:errors].each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  <% end %>
+
+  <form class="user-form" action="/session" method="post">
+    <input
+      type="hidden"
+      name="authenticity_token"
+      value="<%= form_authenticity_token %>"
+    >
+
+    <input
+      type="text"
+      class="user-input"
+      id="email"
+      name="user[email]"
+      value="<%= @user.email %>"
+      placeholder="Email"
+    >
+
+    <input
+      type="password"
+      class="user-input"
+      id="password"
+      name="user[password]"
+      placeholder="Password"
+    >
+
+    <input class="button user-button" type="submit" value="Log me in!">
+  </form>
+  <!-- <div class="line"></div>
+  <p class="or">or</p>
+  <div class="line"></div> -->
+  <button class="button user-button" id="guest-login">Guest login</button>
+  <div class="user-form-link">
+    <p>New to Rocketstarter? <a href="<%= new_user_url %>">Sign Up</a>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function () {
+    $("#guest-login").on("click", function () {
+      $("#email").val("guest@example.com");
+      $("#password").val("password");
+      window.setTimeout($("form").trigger.bind($("form"), "submit"), 500);
+    })
+  });
+</script>

@@ -1,0 +1,50 @@
+module Api
+  class ProjectsController < ApiController
+    def index
+      @projects = Project.sort_by(params[:sort_by])
+      render :index
+    end
+
+    def show
+      @project = Project.includes(:owner, :rewards).find(params[:id])
+      render :show
+    end
+
+    def create
+      @project = current_user.owned_projects.new(project_params)
+      @project.end_date = Time.now + params[:project][:duration].to_i.days
+      if @project.save
+        render json: @project
+      else
+        render json: @project.errors.full_messages, status: 422
+      end
+    end
+
+    private
+
+    def project_params
+      project_params = params.require(:project).permit(
+        :id,
+        :title,
+        :description,
+        :goal_amount,
+        :image_path,
+        :category_id
+      )
+      project_params[:goal_amount] = project_params[:goal_amount]
+                                        .gsub(/[\$,]/, "")
+                                        .to_i
+      project_params[:rewards_attributes] = rewards_params
+      project_params
+    end
+
+    def rewards_params
+      rewards_params = params.require(:project).require(:rewards)
+      rewards_params.map do |key, value|
+        reward = value.permit(:description, :amount)
+        reward[:amount] = reward[:amount].gsub(/[\$,]/, "").to_i
+        reward
+      end
+    end
+  end
+end

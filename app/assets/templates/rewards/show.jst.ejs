@@ -1,0 +1,10 @@
+<% if (live) { %>
+  <a href="#projects/<%= reward.escape("project_id") %>/pledges/new/?reward=<%= reward.id %>">
+  <h1>Pledge $<%= reward.escape("amount") %> or more</h1>
+  <p><%= reward.escape("description") %></p>
+  <div class="hover-text"><h2>Select this reward</h2></div>
+  </a>
+<% } else { %>
+  <h1>Pledge $<%= reward.escape("amount") %> or more</h1>
+  <p><%= reward.escape("description") %></p>
+<% } %>

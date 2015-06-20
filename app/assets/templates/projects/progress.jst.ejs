@@ -1,0 +1,20 @@
+<ul class="progress-list">
+  <li>
+    <p class="progress-big"><%= project.escape("num_sponsors") %></p>
+    <p class="progress-small">backers</p>
+  </li>
+  <li>
+    <p class="progress-big" id="progress-amount">$<%= project.escape("amount_raised") %></p>
+    <p class="progress-small">pledged of $<%= project.escape("goal_amount") %> goal</p>
+  </li>
+  <% if (daysLeft > 0) { %>
+    <li>
+      <p class="progress-big"><%= daysLeft %></p>
+      <p class="progress-small">days to go</p>
+    </li>
+    </ul>
+    <a href="#projects/<%= project.id %>/pledges/new" class="button fund-button">Back This Project</a>
+  <% } else { %>
+      <li><p class="progress-big">Funding <br>Closed</p></li>
+      </ul>
+  <% } %>

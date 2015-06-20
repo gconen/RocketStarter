@@ -1,0 +1,13 @@
+<label for="reward-<%= reward.id %>" class="clearfix">
+  <input
+    type="radio"
+    name="pledge[reward_id]"
+    value="<%= reward.id %>"
+    id="reward-<%= reward.id %>"
+    <% if (checked) { %>
+      checked
+    <% } %>>
+
+  <h3 class="reward-option-amount">$<%= reward.escape("amount") %>+</h3>
+  <div class="reward-option-description"><%= reward.escape("description") %></div>
+</label>

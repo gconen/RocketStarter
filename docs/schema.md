@@ -8,7 +8,7 @@ owner_id    | integer   | not null, foreign key (references users)
 title       | string    | not null
 description | text      | not null
 goal_amount | integer   | not null
-image_url   | string    | not null
+image_path  | string    | not null
 expiration  | date      | not null
 
 ## pledges
@@ -18,6 +18,7 @@ id          | integer   | not null, primary key
 project_id  | integer   | not null, foreign key
 sponsor_id  | integer   | not null, foreign key (references users)
 amount      | integer   | not null
+reward_id   | integer   | foreign key
 
 ## rewards
 column name | data type | details

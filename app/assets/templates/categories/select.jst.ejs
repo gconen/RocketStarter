@@ -1,0 +1,10 @@
+<select name="project[category_id]">
+  <option selected disabled>
+    Select One
+  </option>
+  <% categories.each(function (category) { %>
+      <option value="<%= category.id %>">
+        <%= category.escape("title") %>
+      </option>
+  <% }); %>
+</select>

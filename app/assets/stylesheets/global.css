@@ -1,0 +1,94 @@
+html, body, section, article,
+h1, h2, h3, h4, h5, p, pre, a {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: inherit;
+  font: inherit;
+  text-decoration: inherit;
+  text-align: inherit;
+  color: inherit;
+  background: transparent;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Helvetica Neue";
+}
+
+ul {
+  list-style: none;
+}
+
+input, textarea {
+  display: block;
+  width: 100%;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 14px;
+  box-sizing: border-box;
+  border: 1px solid lightgrey;
+}
+
+input {
+  height: 40px;
+}
+
+.button {
+  display: block;
+  border: none;
+  background-color: #2bde73;
+  font-size: 14px;
+  color: white;
+  border-radius: 5px;
+  font-family: 'Helvetica Neue';
+}
+
+.grey-background {
+  background-color: #F7FAFA;
+}
+
+.button:hover {
+  background-color: green;
+  cursor: pointer;
+}
+
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.background-image {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  width: 100%
+}
+
+.hidden {
+  display: none;
+}
+
+.errors {
+  background-color:red;
+  width: 300px;
+  margin: auto;
+  padding: 18px;
+  font-size: 18px;
+  font-family: "Helvetica Neue";
+  border-radius: 5px;
+  color: #F4F4F4;
+}
+
+
+.errors li {
+  margin-bottom: 5px;
+}
+
+.errors li:last-child {
+  margin: 0;
+}

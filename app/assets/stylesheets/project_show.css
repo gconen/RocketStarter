@@ -1,0 +1,73 @@
+.project-show-header {
+  background-color: #F7FAFA;
+  padding: 40px;
+  border-bottom: 1px solid lightgrey;
+}
+
+.project-title {
+  width:100%;
+  margin-bottom: 40px;
+}
+
+.project-title > h1, h2 {
+  text-align: center;
+}
+
+.project-title > h1 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.project-show-main {
+  width: 1175px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+}
+
+.project-show-main > * {
+  float: left;
+}
+
+.project-description {
+  width: 700px;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.project-description h2 {
+  text-align: left;
+  font-size: 27px;
+  margin-bottom: 60px;
+}
+
+.project-header-container {
+  width: 1175px;
+  margin:auto;
+}
+
+.project-header-container > * {
+  float: left;
+  margin-top: 10px;
+}
+
+.project-header-container .button {
+  margin-top: 50px;
+  margin-left: 15px;
+  padding: 15px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.project-header-container li {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.progress-list {
+  -webkit-padding-start: 24px;
+}
+
+.progress-big {
+  font-size: 45px;
+}

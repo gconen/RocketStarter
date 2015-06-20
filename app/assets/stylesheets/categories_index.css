@@ -1,0 +1,71 @@
+.categories-index-title {
+  font-size: 36px;
+  margin: 60px;
+  text-align: center;
+  color: #EEEEEE;
+}
+
+.categories-index-item {
+  float: left;
+  margin: 20px;
+  height: 160px;
+  width: 275px;
+  border-radius: 5px;
+  border: 1px solid lightgrey;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  font-size: 22px;
+  transition: background-color .3s;
+  transition-timing-function: ease;
+  opacity: .87;
+  font-family: "Helvetica Neue";
+}
+
+.categories-index-item:hover:nth-child(3n+0) {
+  background-color: magenta;
+}
+
+.categories-index-item:hover:nth-child(3n+1) {
+  background-color: cyan;
+}
+
+.categories-index-item:hover:nth-child(3n+2) {
+  background-color: yellow;
+}
+
+.categories-index-item a {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+.categories-list {
+  width: 1000px;
+  margin: auto;
+}
+
+.hover-text {
+  position: absolute;
+  top: -25px;
+  width: 100%;
+  transition: top .3s;
+}
+
+.categories-index-item:hover .hover-text{
+  top: 50%;
+  margin-top: -11px;
+}
+
+.non-hover-text {
+  position: absolute;
+  bottom: 50%;
+  margin-bottom: -11px;
+  width: 100%;
+  transition: bottom .3s;
+  color: white;
+}
+
+.categories-index-item:hover .non-hover-text{
+  bottom: -25px;
+}

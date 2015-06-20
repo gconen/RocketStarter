@@ -1,0 +1,30 @@
+<h2 class="reward-number">
+  Reward #<%= num %>
+
+  <p class="form-instructions">
+    Describe what people who choose this reward will get, and enter the minimum
+    required pledge amount.
+  </p>
+</h2>
+<div class="reward-input">
+  <div class="reward-row clearfix">
+
+    <label for="reward-amount-<%= num %>">Pledge Amount</label>
+    <input
+      type="text"
+      class="reward-amount"
+      id="reward-amount-<%= num %>"
+      name="project[rewards][<%= num - 1 %>][amount]"
+      value="$<%= reward.escape("amount") %>">
+
+  </div>
+  <div class="reward-row clearfix">
+
+    <label for="reward-description-<%= num %>">Description</label>
+    <textarea
+      id="reward-description-<%= num %>"
+      name="project[rewards][<%= num - 1 %>][description]"
+    ><%= reward.escape("description") %></textarea>
+
+  </div>
+</div>
