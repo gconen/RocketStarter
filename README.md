@@ -16,8 +16,8 @@ RocketStarter duplicates the functionality of Kickstarter. Users can:
 - [x] See how much funding projects have received
 - [x] Set end dates for project funding requests
 - [x] Stop funding after project end dates
-- [ ] Search for projects
 - [x] Upload images for headers and icons for their project
+- [x] Categories for projects
 
 ## Design Docs
 * [View Wireframes][views]
@@ -67,22 +67,23 @@ projects where funding has ended.
 
 [Details][phase-five]
 
-### Phase 6: Search (~1 day)
-I will add a search route for projects and add backbone views to allow users to
-search for projects. By the end of this phase, users will be able to search for
-projects who titles contain a given search string.
+### Phase 6: Image Upload (~1 day)
+I will use cloudinary to add image uploads, and update the ProjectShow and
+ProjectsIndexItem view to display an uploaded image associated with the project.
 
 [Details][phase-six]
 
-### Phase 7: Image Upload (~1 day)
-I will use imagery to add image uploads, and update the ProjectShow and
-ProjectsIndexItem view to display an uploaded image associated with the project.
+### Phase 7: Categories (~1 day)
+I will add categories for projects, which will be selected by the project's 
+creator. Users will be able to view the all the projects in a category (as well as
+all the projects at once) and sort projects within categories by a variety of 
+attributes.
 
 [Details][phase-seven]
 
 ### Bonus Features (TBD)
+- [ ] Search for projects
 - [ ] Markdown support for project descriptions
-- [x] Tagging/categories for projects
 - [ ] Comments on projects
 - [ ] Mark projects to follow
 - [ ] Updates/Timeline for projects
