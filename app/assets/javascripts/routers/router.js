@@ -16,7 +16,7 @@ Kickstarter.Routers.Router = Backbone.Router.extend({
 
   index: function () {
     $('body').removeClass("grey-background");
-    this.indexCategories();
+    this.indexProjects();
   },
 
   indexCategories: function () {
