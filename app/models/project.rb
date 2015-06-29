@@ -50,12 +50,6 @@ class Project < ActiveRecord::Base
   accepts_nested_attributes_for :rewards
   belongs_to :category, inverse_of: :projects
 
-  after_initialize :ensure_image_path
-
-  def ensure_image_path
-    image_path ||= "v1434654739/15-066_krmphl.png"
-  end
-
   # Warning: N+1 query if used for N projects
   # Todo: fix that
   def amount_raised
