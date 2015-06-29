@@ -14,7 +14,7 @@ class Project < ActiveRecord::Base
           SUM(pledges.amount) DESC
         SQL
         )
-        #CASE WHEN to solve problems with were NULL values land in ORDER BY
+        #CASE WHEN to solve problems with where NULL values land in ORDER BY
     when "Popularity"
       projects = Project.joined_with_pledges
         .order("COUNT(DISTINCT pledges.sponsor_id) DESC")
@@ -30,7 +30,7 @@ class Project < ActiveRecord::Base
 
 
 
-  validates :owner, :title, :description, :category, presence: true
+  validates :owner, :title, :category, presence: true
   validates :goal_amount, :end_date, :image_path, presence: true
   validates :title, uniqueness: { scope: :owner }
   validates :goal_amount, numericality: { greater_than: 0 }
@@ -49,6 +49,12 @@ class Project < ActiveRecord::Base
   has_many :rewards, inverse_of: :project
   accepts_nested_attributes_for :rewards
   belongs_to :category, inverse_of: :projects
+
+  after_initialize :ensure_image_path
+
+  def ensure_image_path
+    image_path ||= "v1434654739/15-066_krmphl.png"
+  end
 
   # Warning: N+1 query if used for N projects
   # Todo: fix that
