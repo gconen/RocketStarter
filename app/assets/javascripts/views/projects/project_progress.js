@@ -3,7 +3,7 @@ Kickstarter.Views.ProjectProgress = Backbone.View.extend({
 
   initialize: function (options) {
     this.listenTo(this.model, "sync", this.render);
-    var queryResult = /\?.*\$(\d+)/.exec(window.location.hash)
+    var queryResult = /\?.*\$(\d+)/.exec(window.location.hash);
     this.countAmount = (queryResult ? parseInt(queryResult[1]) : 0);
   },
 
@@ -42,4 +42,4 @@ Kickstarter.Views.ProjectProgress = Backbone.View.extend({
     return this;
   },
 
-})
+});
