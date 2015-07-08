@@ -5,6 +5,7 @@
   padding: 130px;
   border-bottom: 1px solid lightgrey;
   background-image: url("http://res.cloudinary.com/rocketstarter/image/upload/v1434660435/sdo_views_of_may_5_2015_x-class_flare_cffjyr_bb5q1s.jpg");
+  background-repeat: round;
   text-shadow: 1px 1px 2px rgba(144, 144, 144, 0.57);
 }
 
